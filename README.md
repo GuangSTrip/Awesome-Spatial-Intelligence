@@ -35,7 +35,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 ## 2. Datasets and Benchmarks
 
-**<center>2025</center>**
+**<div style="text-align: center;">2025</div>**
 
 - **[Seeing from Another Perspective: Evaluating Multi-View Understanding in MLLMs](https://arxiv.org/abs/2504.15280)**  
   [[Project-Page]](https://danielchyeh.github.io/All-Angles-Bench/)
@@ -82,7 +82,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Dataset-PhysBench]](https://huggingface.co/datasets/USC-GVL/PhysBench)
 
 ---
-**<center>2024</center>**
+**<div style="text-align: center;">2024</div>**
 
 - **[Do Multimodal Language Models Really Understand Direction? A Benchmark for Compass Direction Reasoning](https://arxiv.org/abs/2412.16599)**  
 
@@ -206,7 +206,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Dataset-NuInstruct]](https://github.com/xmed-lab/NuInstruct)
 
 ---
-**<center>2023</center>**
+**<div style="text-align: center;">2023</div>**
 
 - **[3D-Aware Visual Question Answering about Parts, Poses and Occlusions](https://arxiv.org/abs/2310.17914)**  
   [[Project-Page]](https://github.com/XingruiWang/3D-Aware-VQA)
@@ -217,14 +217,14 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Dataset-Open X-Embodiment]](https://docs.google.com/spreadsheets/d/1rPBD77tk60AEIGZrGSODwyyzs5FgCU9Uz3h-3_t2A9g/edit?gid=0#gid=0)
 
 ---
-**<center>2022</center>**
+**<div style="text-align: center;">2022</div>**
 
 - **[Things not Written in Text: Exploring Spatial Commonsense from Visual Signals](https://arxiv.org/abs/2203.08075)**  
   [[Project-Page]](https://github.com/xxxiaol/spatial-commonsense)
   [[Dataset-spatial-commonsense]](https://github.com/xxxiaol/spatial-commonsense)
 
 ---
-**<center>2020</center>**
+**<div style="text-align: center;">2020</div>**
 
 - **[SPARE3D: A Dataset for SPAtial REasoning on Three-View Line Drawings](https://arxiv.org/abs/2003.14034)**  
   [[Project-Page]](https://github.com/ai4ce/SPARE3D)
