@@ -37,47 +37,58 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 **<div style="text-align: center;">2025</div>**
 
-- **[Seeing from Another Perspective: Evaluating Multi-View Understanding in MLLMs](https://arxiv.org/abs/2504.15280)**  
+- **Seeing from Another Perspective: Evaluating Multi-View Understanding in MLLMs**  
+  [[Paper]](https://arxiv.org/abs/2504.15280)
   [[Project-Page]](https://danielchyeh.github.io/All-Angles-Bench/)
   [[Dataset-All-Angles-Bench]](https://huggingface.co/datasets/ch-chenyu/All-Angles-Bench)
 
-- **[Spatial-R1: Enhancing MLLMs in Video Spatial Reasoning](https://arxiv.org/abs/2504.01805)**  
+- **Spatial-R1: Enhancing MLLMs in Video Spatial Reasoning**  
+  [[Paper]](https://arxiv.org/abs/2504.01805)
   [[Project-Page]](https://github.com/OuyangKun10/Spatial-R1)
   [[Dataset-Spatial-R1-151k]](https://huggingface.co/datasets/RUBBISHLIKE/Spatial-R1-151k)
 
-- **[Improved Visual-Spatial Reasoning via R1-Zero-Like Training](https://arxiv.org/abs/2504.00883)**  
+- **Improved Visual-Spatial Reasoning via R1-Zero-Like Training**  
+  [[Paper]](https://arxiv.org/abs/2504.00883)
   [[Project-Page]](https://github.com/zhijie-group/R1-Zero-VSI)
 
-- **[From Flatland to Space: Teaching Vision-Language Models to Perceive and Reason in 3D](https://arxiv.org/pdf/2503.22976)**  
+- **From Flatland to Space: Teaching Vision-Language Models to Perceive and Reason in 3D**  
+  [[Paper]](https://arxiv.org/pdf/2503.22976)
   [[Project-Page]](https://fudan-zvg.github.io/spar/)
   [[Dataset-SPAR-7M]](https://huggingface.co/datasets/jasonzhango/SPAR-7M)
   [[Dataset-SPAR-Bench]](https://huggingface.co/datasets/jasonzhango/SPAR-Bench)
 
-- **[Gemini Robotics: Bringing AI into the Physical World](https://arxiv.org/abs/2503.20020)**  
+- **Gemini Robotics: Bringing AI into the Physical World**  
+  [[Paper]](https://arxiv.org/abs/2503.20020)
   [[Dataset-PhysicalAI-Robotics-GR00T-X-Embodiment-Sim]](https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim)
 
-- **[Mind the Gap: Benchmarking Spatial Reasoning in Vision-Language Models](https://arxiv.org/abs/2503.19707)**  
+- **Mind the Gap: Benchmarking Spatial Reasoning in Vision-Language Models**  
+  [[Paper]](https://arxiv.org/abs/2503.19707)
   [[Project-Page]](https://github.com/stogiannidis/srbench)
   [[Dataset-srbench]](https://github.com/stogiannidis/srbench)
 
-- **[Open3DVQA: A Benchmark for Comprehensive Spatial Reasoning with Multimodal Large Language Model in Open Space](https://www.arxiv.org/abs/2503.11094)**  
+- **Open3DVQA: A Benchmark for Comprehensive Spatial Reasoning with Multimodal Large Language Model in Open Space**  
+  [[Paper]](https://www.arxiv.org/abs/2503.11094)
   [[Project-Page]](https://github.com/WeichenZh/Open3DVQA)
   [[Dataset-Open3DVQA]](https://github.com/WeichenZh/Open3DVQA)
 
-- **[Spatial457: A Diagnostic Benchmark for 6D Spatial Reasoning of Large Multimodal Models](https://arxiv.org/abs/2502.08636)**  
+- **Spatial457: A Diagnostic Benchmark for 6D Spatial Reasoning of Large Multimodal Models**  
+  [[Paper]](https://arxiv.org/abs/2502.08636)
   [[Project-Page]](https://xingruiwang.github.io/projects/Spatial457/)
   [[Dataset-Spatial457]](https://huggingface.co/datasets/RyanWW/Spatial457)
 
-- **[iVISPAR — An Interactive Visual-Spatial Reasoning Benchmark for VLMs](https://arxiv.org/abs/2502.03214)**  
+- **iVISPAR — An Interactive Visual-Spatial Reasoning Benchmark for VLMs**  
+  [[Paper]](https://arxiv.org/abs/2502.03214)
   [[Project-Page]](https://ivispar.ai/)
   [[Dataset-iVISPAR]](https://github.com/SharkyBamboozle/iVISPAR)
 
-- **[SoFar: Language-Grounded Orientation Bridges Spatial Reasoning and Object Manipulation](https://arxiv.org/abs/2502.13143)**  
+- **SoFar: Language-Grounded Orientation Bridges Spatial Reasoning and Object Manipulation**  
+  [[Paper]](https://arxiv.org/abs/2502.13143)
   [[Project-Page]](https://qizekun.github.io/sofar/)
   [[Dataset-OrienText300K]](https://huggingface.co/datasets/qizekun/OrienText300K)
   [[Dataset-6DoF-SpatialBench]](https://huggingface.co/datasets/qizekun/6DoF-SpatialBench)
 
-- **[PhysBench: Benchmarking and Enhancing Vision-Language Models for Physical World Understanding](https://arxiv.org/abs/2501.16411)**  
+- **PhysBench: Benchmarking and Enhancing Vision-Language Models for Physical World Understanding**  
+  [[Paper]](https://arxiv.org/abs/2501.16411)
   [[Project-Page]](https://physbench.github.io/)
   [[Dataset-PhysBench]](https://huggingface.co/datasets/USC-GVL/PhysBench)
 
