@@ -66,6 +66,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://dust3r.europe.naverlabs.com/)
   [[Code]](https://github.com/naver/dust3r)
 
+---
 **<div style="text-align: center;">Scene Generation</div>**
 
 - **SceneCraft: Layout-Guided 3D Scene Generation**  
@@ -85,6 +86,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://yueyang1996.github.io/holodeck/)
   [[Code]](https://github.com/allenai/Holodeck)
 
+---
 **<div style="text-align: center;">Spatial Simulation</div>**
 
 - **AI2-THOR: An Interactive 3D Environment for Visual AI**  
@@ -104,7 +106,6 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Paper]](https://arxiv.org/abs/2406.02523)
   [[Project-Page]](https://robocasa.ai/)
   [[Code]](https://github.com/robocasa/robocasa)
-
 
 ### 1.3 Multi-modal
 
@@ -417,6 +418,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://aurora-perception.github.io/)
   [[Code]](https://github.com/mahtabbigverdi/Aurora-perception)
 
+---
 **<div style="text-align: center;">Reinforcement Learning</div>**
 
 - **Dream to Control: Learning Behaviors by Latent Imagination**  
