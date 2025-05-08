@@ -38,6 +38,12 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 **<div style="text-align: center;">Understanding</div>**
 
+- **ImageNet3D: Towards General-Purpose Object-Level 3D Understanding**  
+  *a large dataset for general-purpose object-level 3D understanding.*  
+  [[Paper]](https://arxiv.org/abs/2406.09613)
+  [[Project-Page]](https://imagenet3d.github.io/)
+  [[Code]](https://github.com/wufeim/imagenet3d_exp)
+
 - **SpatialSense: An Adversarially Crowdsourced Benchmark for Spatial Relation Recognition**  
   *a dataset specializing in spatial relation recognition which captures a broad spectrum of such challenges, allowing for proper benchmarking of computer vision techniques.*  
   [[Paper]](https://arxiv.org/abs/1908.02660)
@@ -68,7 +74,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Code]](https://github.com/naver/mast3r)
 
 - **Know Your Neighbors: Improving Single-View Reconstruction via Spatial Vision-Language Reasoning**  
-  **  
+  *a novel method for single-view scene reconstruction that reasons about semantic and spatial context to predict each point's density.*  
   [[Paper]](https://arxiv.org/abs/2404.03658)
   [[Project-Page]](https://ruili3.github.io/kyn/)
   [[Code]](https://github.com/ruili3/Know-Your-Neighbors)
@@ -123,6 +129,12 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 **<div style="text-align: center;">Understanding</div>**
 
+- **Seeing from Another Perspective: Evaluating Multi-View Understanding in MLLMs**  
+  *show that MLLMs are particularly underperforming under two aspects: (1) cross-view correspondence for partially occluded views and (2) establishing the coarse camera poses.*  
+  [[Paper]](https://arxiv.org/abs/2504.15280)
+  [[Project-Page]](https://danielchyeh.github.io/All-Angles-Bench/)
+  [[Code]](https://github.com/Chenyu-Wang567/All-Angles-Bench)
+
 - **Thinking in Space: How Multimodal Large Language Models See, Remember, and Recall Spaces**  
   *probe models to express how they think in space both linguistically and visually and find that while spatial reasoning capabilities remain the primary bottleneck for MLLMs to reach higher benchmark performance, local world models and spatial awareness do emerge within these models.*  
   [[Paper]](https://arxiv.org/abs/2412.14171)
@@ -171,6 +183,20 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Paper]](https://arxiv.org/abs/2401.12168)
   [[Project-Page]](https://spatial-vlm.github.io/)
   [[Code]](https://github.com/remyxai/VQASynth)
+
+---
+**<div style="text-align: center;">Spatial Reasoning</div>**
+
+- **Mind the Gap: Benchmarking Spatial Reasoning in Vision-Language Models**  
+  *delineates the core elements of spatial reasoning: spatial relations, orientation and navigation, mental rotation, and spatial visualization, and then assesses the performance of these models in both synthetic and real-world images, bridging controlled and naturalistic contexts.*  
+  [[Paper]](https://arxiv.org/abs/2503.19707)
+  [[Code]](https://github.com/stogiannidis/srbench)
+
+- **Open3DVQA: A Benchmark for Comprehensive Spatial Reasoning with Multimodal Large Language Model in Open Space**  
+  *a novel benchmark, Open3DVQA, to comprehensively evaluate the spatial reasoning capacities of current state-of-the-art (SOTA) foundation models in open 3D space.*  
+  [[Paper]](https://www.arxiv.org/abs/2503.11094)
+  [[Code]](https://github.com/WeichenZh/Open3DVQA)
+
 
 ### 1.4 Others (radar/GPS etc.)
 
@@ -431,7 +457,19 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 ### 3.2 Machine Learning
 
+- **Locate 3D: Real-World Object Localization via Self-Supervised Learning in 3D**  
+  *a model for localizing objects in 3D scenes from referring expressions like "the small coffee table between the sofa and the lamp."*  
+  [[Paper]](https://arxiv.org/abs/2504.14151)
+  [[Code]](https://github.com/facebookresearch/locate-3d)
+
 ### 3.3 deep learning
+
+- **Compositional 4D Dynamic Scenes Understanding with Physics Priors for Video Question Answering**  
+  *a Neural-Symbolic VideoQA model integrating Physics prior for 4D dynamic properties with explicit scene representation of videos.*  
+  [[Paper]](https://arxiv.org/abs/2406.00622)
+  [[Project-Page]](https://xingruiwang.github.io/projects/DynSuperCLEVR/)
+  [[Code]](https://github.com/XingruiWang/NS-4DPhysics)
+
 
 - **Can Transformers Capture Spatial Relations between Objects?**  
   *approaches exploiting the long-range attention capabilities of transformers for spatial relationships task*  
@@ -439,9 +477,42 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://sites.google.com/view/spatial-relation)
   [[Code]](https://github.com/AlvinWen428/spatial-relation-benchmark)
 
+- **3D-Aware Visual Question Answering about Parts, Poses and Occlusions**  
+  *a 3D-aware VQA model that marries two powerful ideas: probabilistic neural symbolic program execution for reasoning and deep neural networks with 3D generative representations of objects for robust visual recognition.*  
+  [[Paper]](https://arxiv.org/abs/2310.17914)
+  [[Code]](https://github.com/XingruiWang/3D-Aware-VQA)
+
 ### 3.4 LLM
 
-**<div style="text-align: center;">Reasoning</div>**
+**<div style="text-align: center;">Spatial Reasoning</div>**
+
+- **Spatial-R1: Enhancing MLLMs in Video Spatial Reasoning**  
+  *a targeted approach involving two key contributions: the curation of SR, a new video spatial reasoning dataset from ScanNet with automatically generated QA pairs across seven task types, and the application of Task-Specific Group Relative Policy Optimization (GRPO) for fine-tuning.*  
+  [[Paper]](https://arxiv.org/abs/2504.01805)
+  [[Code]](https://github.com/OuyangKun10/Spatial-R1)
+
+- **Improved Visual-Spatial Reasoning via R1-Zero-Like Training**  
+  *incorporate GRPO training for improved visual-spatial reasoning, using the carefully curated VSI-100k dataset, following DeepSeek-R1-Zero.*  
+  [[Paper]](https://arxiv.org/abs/2504.00883)
+  [[Code]](https://github.com/zhijie-group/R1-Zero-VSI)
+
+- **From Flatland to Space: Teaching Vision-Language Models to Perceive and Reason in 3D**  
+  *a novel 2D spatial data generation and annotation pipeline built upon scene data with 3D ground-truth, enables the creation of a diverse set of spatial tasks, ranging from basic perception tasks to more complex reasoning tasks.*  
+  [[Paper]](https://arxiv.org/abs/2503.22976)
+  [[Project-Page]](https://fudan-zvg.github.io/spar/)
+  [[Code]](https://github.com/fudan-zvg/spar)
+
+- **SoFar: Language-Grounded Orientation Bridges Spatial Reasoning and Object Manipulation**  
+  *introduce the concept of semantic orientation for the capability to precisely understand object orientations, which defines object orientations using natural language in a reference-frame-free manner.*  
+  [[Paper]](https://arxiv.org/abs/2502.13143)
+  [[Project-Page]](https://qizekun.github.io/sofar/)
+  [[Code]](https://github.com/qizekun/SoFar)
+
+- **Spatial457: A Diagnostic Benchmark for 6D Spatial Reasoning of Large Multimodal Models**  
+  *Spatial457, a scalable and unbiased synthetic dataset designed with 4 key capability for spatial reasoning: multi-object recognition, 2D location, 3D location, and 3D orientation.*  
+  [[Paper]](https://arxiv.org/abs/2502.08636)
+  [[Project-Page]](https://xingruiwang.github.io/projects/Spatial457/)
+  [[Code]](https://github.com/XingruiWang/Spatial457)
 
 - **SpatialCOT: Advancing Spatial Reasoning through Coordinate Alignment and Chain-of-Thought for Embodied Task Planning**  
   *a novel approach named SpatialCoT comprises two stages: spatial coordinate bi-directional alignment, which aligns vision-language inputs with spatial coordinates, and chain-of-thought spatial grounding, which harnesses the reasoning capabilities of language models for advanced spatial reasoning.*  
@@ -483,6 +554,11 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Code]](https://github.com/Fangjun-Li/SpatialLM-StepGame)
 
 **<div style="text-align: center;">Recognition</div>**
+
+- **Video-3D LLM: Learning Position-Aware Video Representation for 3D Scene Understanding**  
+  *a novel generalist model for 3D scene understanding by treating 3D scenes as dynamic videos and incorporating 3D position encoding into these representations*  
+  [[Paper]](https://arxiv.org/abs/2412.00493)
+  [[Code]](https://github.com/LaVi-Lab/Video-3D-LLM)
 
 - **Proximity QA: Unleashing the Power of Multi-Modal Large Language Models for Spatial Proximity Analysis**  
   *Framework operates in two phases: the first phase focuses on guiding the models to understand the relative depth of objects, and the second phase further encourages the models to infer the proximity relationships between objects based on their depth perceptions.*  
@@ -571,6 +647,11 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://openvla.github.io/)
   [[Code]](https://github.com/openvla/openvla)
 
+- **Holistic Autonomous Driving Understanding by Bird's-Eye-View Injected Multi-Modal Large Models**  
+  *an end-to-end method for efficiently deriving instruction-aware Bird's-Eye-View (BEV) features, language-aligned for large language models, which integrates multi-view, spatial awareness, and temporal semantics*  
+  [[Paper]](https://arxiv.org/abs/2401.00988)
+  [[Code]](https://github.com/xmed-lab/NuInstruct)
+
 - **SPOC: Imitating Shortest Paths in Simulation Enables Effective Navigation and Manipulation in the Real World**  
   *how that imitating shortest-path planners in simulation produces agents that, given a language instruction, can proficiently navigate, explore, and manipulate objects in both simulation and in the real world using only RGB sensors (no depth map or GPS coordinates).*  
   [[Paper]](https://arxiv.org/abs/2312.02976)
@@ -613,42 +694,3 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 - [Awesome-Spatial-Intelligence (for Robotics)](https://github.com/lif314/Awesome-Spatial-Intelligence)
 - [Awesome-Visual-Spatial-Intelligence](https://github.com/bobochow/Awesome-Visual-Spatial-Intelligence)
 - [Awesome-VLA-Robotics](https://github.com/Jiaaqiliu/Awesome-VLA-Robotics)
-
-
-
-
-
-- ****  
-  **  
-  [[Paper]]()
-  [[Project-Page]]()
-  [[Code]]()
-
-- ****  
-  **  
-  [[Paper]]()
-  [[Project-Page]]()
-  [[Code]]()
-
-
-- ****  
-  **  
-  [[Paper]]()
-  [[Project-Page]]()
-  [[Code]]()
-
-
-- ****  
-  **  
-  [[Paper]]()
-  [[Project-Page]]()
-  [[Code]]()
-
-
-- ****  
-  **  
-  [[Paper]]()
-  [[Project-Page]]()
-  [[Code]]()
-
-
