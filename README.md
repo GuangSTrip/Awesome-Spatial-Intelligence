@@ -21,6 +21,13 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   - [3.2 Machine Learning](#32-machine-learning)
   - [3.3 deep learning](#33-deep-learning)
   - [3.4 LLM](#34-llm)
+- [4. Application](#4-application)
+  - [4.1 Robotics](#41-robotics)
+  - [4.2 GIScience/Geo AI](#42-gisciencegeo-ai)
+  - [4.3 Medicine](#43-medicine)
+  - [4.4 AR/VR/XR](#44-arvrxr)
+  - [4.5 Beyond AI](#45-beyond-ai)
+  - [4.6 Integrated apps](#46-integrated-apps)
 - [Reference Repository](#reference-repository)
 
 ## 1. Spatial Intelligence in various areas/tasks
@@ -30,6 +37,15 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 ### 1.2 CV
 
 ### 1.3 Multi-modal
+
+- **Thinking in Space: How Multimodal Large Language Models See, Remember, and Recall Spaces**  
+  [[Paper]](https://arxiv.org/abs/2412.14171)
+  [[Project-Page]](https://vision-x-nyu.github.io/thinking-in-space.github.io/)
+  [[Code]](https://github.com/vision-x-nyu/thinking-in-space)
+
+- **SAT: Dynamic Spatial Aptitude Training for Multimodal Language Models**  
+  [[Paper]](https://arijitray.com/SAT/)
+  [[Project-Page]](https://arxiv.org/abs/2412.07755)
 
 ### 1.4 Others (radar/GPS etc.)
 
@@ -285,6 +301,32 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 ### 3.4 LLM
 
+## 4. Application
+
+### 4.1 Robotics
+
+- **RoboSpatial: Teaching Spatial Understanding to 2D and 3D Vision-Language Models for Robotics**  
+  *RoboSpatial, a large-scale dataset for spatial understanding in robotics. It consists of real indoor and tabletop scenes, captured as 3D scans and egocentric images, and annotated with rich spatial information relevant to robotics.*  
+  [[Paper]](https://arxiv.org/abs/2411.16537)
+  [[Project-Page]](https://chanh.ee/RoboSpatial/)
+  [[Code]](https://github.com/NVlabs/RoboSpatial)
+
+- **RoboPoint: A Vision-Language Model for Spatial Affordance Prediction for Robotics**  
+  *an automatic synthetic data generation pipeline that instruction-tunes VLMs to robotic domains and needs*  
+  [[Paper]](https://arxiv.org/abs/2406.10721)
+  [[Project-Page]](https://robo-point.github.io/)
+  [[Code]](https://github.com/wentaoyuan/RoboPoint)
+
+### 4.2 GIScience/Geo AI
+
+### 4.3 Medicine
+
+### 4.4 AR/VR/XR
+
+### 4.5 Beyond AI
+
+### 4.6 Integrated apps
+
 ## Reference Repository
 
 - [Awesome-Spatial-Reasoning](https://github.com/yyyybq/Awesome-Spatial-Reasoning)
@@ -293,3 +335,26 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 - [Awesome-Spatial-Intelligence (for Robotics)](https://github.com/lif314/Awesome-Spatial-Intelligence)
 - [Awesome-Visual-Spatial-Intelligence](https://github.com/bobochow/Awesome-Visual-Spatial-Intelligence)
 - [Awesome-VLA-Robotics](https://github.com/Jiaaqiliu/Awesome-VLA-Robotics)
+
+
+
+
+
+
+
+
+
+- ****  
+  [[Paper]]()
+  [[Project-Page]]()
+  [[Code]]()
+
+- ****  
+  [[Paper]]()
+  [[Project-Page]]()
+  [[Code]]()
+
+- ****  
+  [[Paper]]()
+  [[Project-Page]]()
+  [[Code]]()
