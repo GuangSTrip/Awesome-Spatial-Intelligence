@@ -36,16 +36,119 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 ### 1.2 CV
 
+**<div style="text-align: center;">3D Reconstruction</div>**
+
+- **Light3R-SfM: Towards Feed-forward Structure-from-Motion**  
+  *Light3R-SfM, a feed-forward, end-to-end learnable framework for efficient large-scale Structure-from-Motion (SfM) from unconstrained image collections.*  
+  [[Paper]](https://arxiv.org/abs/2501.14914)
+
+- **Fast3R: Towards 3D Reconstruction of 1000+ Images in One Forward Pass**  
+  *Fast 3D Reconstruction (Fast3R), a novel multi-view generalization to DUSt3R that achieves efficient and scalable 3D reconstruction by processing many views in parallel.*  
+  [[Paper]](https://arxiv.org/abs/2501.13928)
+  [[Project-Page]](https://fast3r-3d.github.io/)
+  [[Code]](https://github.com/facebookresearch/fast3r)
+
+- **Stereo4D: Learning How Things Move in 3D from Internet Stereo Videos**  
+  *a system for mining high-quality 4D reconstructions from internet stereoscopic, wide-angle videos, fuses and filters the outputs of camera pose estimation, stereo depth estimation, and temporal tracking methods into high-quality dynamic 3D reconstructions.*  
+  [[Paper]](https://arxiv.org/abs/2412.09621)
+  [[Project-Page]](https://stereo4d.github.io/)
+  [[Code]](https://github.com/Stereo4d/stereo4d-code)
+
+- **Grounding Image Matching in 3D with MASt3R**  
+  *DUSt3R, a recent and powerful 3D reconstruction framework based on Transformers.*  
+  [[Paper]](https://arxiv.org/abs/2406.09756)
+  [[Project-Page]](https://europe.naverlabs.com/blog/mast3r-matching-and-stereo-3d-reconstruction/)
+  [[Code]](https://github.com/naver/mast3r)
+
+- **DUSt3R: Geometric 3D Vision Made Easy**  
+  *DUSt3R, a radically novel paradigm for Dense and Unconstrained Stereo 3D Reconstruction of arbitrary image collections, i.e. operating without prior information about camera calibration nor viewpoint poses.*  
+  [[Paper]](https://arxiv.org/abs/2312.14132)
+  [[Project-Page]](https://dust3r.europe.naverlabs.com/)
+  [[Code]](https://github.com/naver/dust3r)
+
+**<div style="text-align: center;">Scene Generation</div>**
+
+- **SceneCraft: Layout-Guided 3D Scene Generation**  
+  *SceneCraft, a novel method for generating detailed indoor scenes that adhere to textual descriptions and spatial layout preferences provided by users.*  
+  [[Paper]](https://arxiv.org/abs/2410.09049)
+  [[Project-Page]](https://orangesodahub.github.io/SceneCraft/)
+  [[Code]](https://github.com/OrangeSodahub/SceneCraft/)
+
+- **SceneScript: Reconstructing Scenes With An Autoregressive Structured Language Model**  
+  *SceneScript, a method that directly produces full scene models as a sequence of structured language commands using an autoregressive, token-based approach.*  
+  [[Paper]](https://arxiv.org/abs/2403.13064)
+  [[Project-Page]](https://www.projectaria.com/scenescript/)
+
+- **Holodeck: Language Guided Generation of 3D Embodied AI Environments**  
+  *Holodeck, a system that generates 3D environments to match a user-supplied prompt fully automatedly.*  
+  [[Paper]](https://arxiv.org/abs/2312.09067)
+  [[Project-Page]](https://yueyang1996.github.io/holodeck/)
+  [[Code]](https://github.com/allenai/Holodeck)
+
+**<div style="text-align: center;">Spatial Simulation</div>**
+
+- **AI2-THOR: An Interactive 3D Environment for Visual AI**  
+  *AI2-THOR consists of near photo-realistic 3D indoor scenes, where AI agents can navigate in the scenes and interact with objects to perform tasks.*  
+  [[Paper]](https://arxiv.org/abs/1712.05474)
+  [[Project-Page]](https://ai2thor.allenai.org/)
+  [[Code]](https://github.com/allenai/ai2thor)
+
+- **Habitat: A Platform for Embodied AI Research**  
+  *Habitat, a platform for research in embodied artificial intelligence.*  
+  [[Paper]](https://arxiv.org/abs/1904.01201)
+  [[Project-Page]](https://aihabitat.org/)
+
+
+- **RoboCasa: Large-Scale Simulation of Everyday Tasks for Generalist Robots**  
+  *RoboCasa, a large-scale simulation framework for training generalist robots in everyday environments, features realistic and diverse scenes focusing on kitchen environments.*  
+  [[Paper]](https://arxiv.org/abs/2406.02523)
+  [[Project-Page]](https://robocasa.ai/)
+  [[Code]](https://github.com/robocasa/robocasa)
+
+
 ### 1.3 Multi-modal
 
+**<div style="text-align: center;">Understanding</div>**
+
 - **Thinking in Space: How Multimodal Large Language Models See, Remember, and Recall Spaces**  
+  *probe models to express how they think in space both linguistically and visually and find that while spatial reasoning capabilities remain the primary bottleneck for MLLMs to reach higher benchmark performance, local world models and spatial awareness do emerge within these models.*  
   [[Paper]](https://arxiv.org/abs/2412.14171)
   [[Project-Page]](https://vision-x-nyu.github.io/thinking-in-space.github.io/)
   [[Code]](https://github.com/vision-x-nyu/thinking-in-space)
 
 - **SAT: Dynamic Spatial Aptitude Training for Multimodal Language Models**  
+  *Leveraging our SAT datasets and 6 existing static spatial benchmarks, we systematically investigate what improves both static and dynamic spatial awareness.*  
   [[Paper]](https://arijitray.com/SAT/)
   [[Project-Page]](https://arxiv.org/abs/2412.07755)
+
+- **ProVision: Programmatically Scaling Vision-centric Instruction Data for Multimodal Language Models**  
+  *a programmatic approach that employs scene graphs as symbolic representations of images and human-written programs to systematically synthesize vision-centric instruction data.*  
+  [[Paper]](https://arxiv.org/abs/2412.07012)
+  [[Code]](https://github.com/JieyuZ2/ProVision)
+
+- **TIPS: Text-Image Pretraining with Spatial awareness**  
+  *close the gap between image-text and self-supervised learning, by proposing a novel general-purpose image-text model, which can be effectively used off the shelf for dense and global vision tasks.*  
+  [[Paper]](https://arxiv.org/abs/2410.16512)
+  [[Project-Page]](https://gdm-tips.github.io/)
+  [[Code]](https://github.com/google-deepmind/tips)
+
+- **Cambrian-1: Cambrian-1: A Fully Open, Vision-Centric Exploration of Multimodal LLMs**  
+  *Spatial Vision Aggregator (SVA), a dynamic and spatially-aware connector that integrates high-resolution vision features with LLMs while reducing the number of tokens.*  
+  [[Paper]](https://arxiv.org/abs/2406.16860)
+  [[Project-Page]](https://cambrian-mllm.github.io/)
+  [[Code]](https://github.com/cambrian-mllm/cambrian)
+
+- **SpatialRGPT: Grounded Spatial Reasoning in Vision Language Models**  
+  *(1) a data curation pipeline that enables effective learning of regional representation from 3D scene graphs, and (2) a flexible plugin module for integrating depth information into the visual encoder of existing VLMs.*  
+  [[Paper]](https://arxiv.org/abs/2406.01584)
+  [[Project-Page]](https://www.anjiecheng.me/SpatialRGPT)
+  [[Code]](https://github.com/AnjieCheng/SpatialRGPT)
+
+- **SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities**  
+  *an automatic 3D spatial VQA data generation framework that scales up to 2 billion VQA examples on 10 million real-world images. We then investigate various factors in the training recipe, including data quality, training pipeline, and VLM architecture.*  
+  [[Paper]](https://arxiv.org/abs/2401.12168)
+  [[Project-Page]](https://spatial-vlm.github.io/)
+  [[Code]](https://github.com/remyxai/VQASynth)
 
 ### 1.4 Others (radar/GPS etc.)
 
@@ -301,9 +404,40 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 ### 3.4 LLM
 
+**<div style="text-align: center;">Reasoning</div>**
+
+- **SpatialCOT: Advancing Spatial Reasoning through Coordinate Alignment and Chain-of-Thought for Embodied Task Planning**  
+  *a novel approach named SpatialCoT comprises two stages: spatial coordinate bi-directional alignment, which aligns vision-language inputs with spatial coordinates, and chain-of-thought spatial grounding, which harnesses the reasoning capabilities of language models for advanced spatial reasoning.*  
+  [[Paper]](https://arxiv.org/abs/2501.10074)
+  [[Project-Page]](https://spatialcot.github.io/)
+
+- **Perception Tokens Enhance Visual Reasoning in Multimodal Language Models**  
+  *AURORA, a training method that augments MLMs with perception tokens for improved reasoning over visual inputs.*  
+  [[Paper]](https://arxiv.org/abs/2412.03548)
+  [[Project-Page]](https://aurora-perception.github.io/)
+  [[Code]](https://github.com/mahtabbigverdi/Aurora-perception)
+
+**<div style="text-align: center;">Reinforcement Learning</div>**
+
+- **Dream to Control: Learning Behaviors by Latent Imagination**  
+  *Dreamer, a reinforcement learning agent that solves long-horizon tasks from images purely by latent imagination.*  
+  [[Paper]](https://arxiv.org/abs/1912.01603)
+  [[Project-Page]](https://danijar.com/project/dreamer/)
+  [[Code]](https://github.com/danijar/dreamer)
+
+
 ## 4. Application
 
 ### 4.1 Robotics
+
+- **GR00T N1: An Open Foundation Model for Generalist Humanoid Robots**  
+  *GR00T N1 is a Vision-Language-Action (VLA) model with a dual-system architecture. The vision-language module (System 2) interprets the environment through vision and language instructions.*  
+  [[Paper]](https://arxiv.org/abs/2503.14734)
+  [[Project-Page]](https://developer.nvidia.com/isaac/gr00t)
+
+- **Gemini Robotics: Bringing AI into the Physical World**  
+  *Gemini Robotics-ER (Embodied Reasoning) extends Gemini's multimodal reasoning capabilities into the physical world, with enhanced spatial and temporal understanding.*  
+  [[Paper]](https://arxiv.org/abs/2503.20020)
 
 - **RoboSpatial: Teaching Spatial Understanding to 2D and 3D Vision-Language Models for Robotics**  
   *RoboSpatial, a large-scale dataset for spatial understanding in robotics. It consists of real indoor and tabletop scenes, captured as 3D scans and egocentric images, and annotated with rich spatial information relevant to robotics.*  
@@ -311,11 +445,46 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://chanh.ee/RoboSpatial/)
   [[Code]](https://github.com/NVlabs/RoboSpatial)
 
+- **π_0: A Vision-Language-Action Flow Model for General Robot Control**  
+  *a general-purpose robot foundation model that is believed this is a first step toward our long-term goal of developing artificial physical intelligence*  
+  [[Paper]](https://arxiv.org/abs/2410.24164)
+  [[Project-Page]](https://www.physicalintelligence.company/blog/pi0)
+
+- **Latent Action Pretraining from Videos**  
+  *an unsupervised method for pretraining Vision-Language-Action (VLA) models without ground-truth robot action labels.*  
+  [[Paper]](https://arxiv.org/abs/2410.11758)
+  [[Project-Page]](https://latentactionpretraining.github.io/)
+  [[Code]](https://github.com/LatentActionPretraining/LAPA)
+
+- **Poliformer: Scaling On-Policy RL with Transformers Results in Masterful Navigators**  
+  *PoliFormer (Policy Transformer), an RGB-only indoor navigation agent trained end-to-end with reinforcement learning at scale that generalizes to the real-world without adaptation despite being trained purely in simulation.*  
+  [[Paper]](https://arxiv.org/abs/2406.20083)
+  [[Project-Page]](https://poliformer.allen.ai/)
+  [[Code]](https://github.com/allenai/poliformer)
+
 - **RoboPoint: A Vision-Language Model for Spatial Affordance Prediction for Robotics**  
   *an automatic synthetic data generation pipeline that instruction-tunes VLMs to robotic domains and needs*  
   [[Paper]](https://arxiv.org/abs/2406.10721)
   [[Project-Page]](https://robo-point.github.io/)
   [[Code]](https://github.com/wentaoyuan/RoboPoint)
+
+- **OpenVLA: An Open-Source Vision-Language-Action Model**  
+  *OpenVLA builds on a Llama 2 language model combined with a visual encoder that fuses pretrained features from DINOv2 and SigLIP.*  
+  [[Paper]](https://arxiv.org/abs/2406.09246)
+  [[Project-Page]](https://openvla.github.io/)
+  [[Code]](https://github.com/openvla/openvla)
+
+- **SPOC: Imitating Shortest Paths in Simulation Enables Effective Navigation and Manipulation in the Real World**  
+  *how that imitating shortest-path planners in simulation produces agents that, given a language instruction, can proficiently navigate, explore, and manipulate objects in both simulation and in the real world using only RGB sensors (no depth map or GPS coordinates).*  
+  [[Paper]](https://arxiv.org/abs/2312.02976)
+  [[Project-Page]](https://spoc-robot.github.io/)
+  [[Code]](https://github.com/allenai/spoc-robot-training)
+
+- **Open X-Embodiment: Robotic Learning Datasets and RT-X Models**  
+  *models output robot actions represented with respect to the robot gripper frame. The robot action is a 7-dimensional vector consisting of x, y, z, roll, pitch, yaw, and gripper opening or the rates of these quantities.*  
+  [[Paper]](https://arxiv.org/abs/2310.08864)
+  [[Project-Page]](https://robotics-transformer-x.github.io/)
+  [[Code]](https://github.com/google-deepmind/open_x_embodiment)
 
 ### 4.2 GIScience/Geo AI
 
@@ -326,6 +495,18 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 ### 4.5 Beyond AI
 
 ### 4.6 Integrated apps
+
+**<div style="text-align: center;">World Model</div>**
+
+- **Improving Transformer World Models for Data-Efficient RL**  
+  *an approach to model-based RL that achieves a new state of the art performance on the challenging Craftax-classic benchmark, an open-world 2D survival game that requires agents to exhibit a wide range of general abilities*  
+  [[Paper]](https://arxiv.org/abs/2502.01591)
+  [[Code]](https://github.com/lucidrains/improving-transformers-world-model-for-rl?tab=readme-ov-file)
+
+- **3D-VLA: A 3D Vision-Language-Action Generative World Model**  
+  *propose 3D-VLA by introducing a new family of embodied foundation models that seamlessly link 3D perception, reasoning, and action through a generative world model.*  
+  [[Paper]](https://arxiv.org/abs/2403.09631)
+  [[Project-Page]](https://vis-www.cs.umass.edu/3dvla/)
 
 ## Reference Repository
 
@@ -344,17 +525,32 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 
 
+
+
+
+
+
+
+
 - ****  
+  **  
   [[Paper]]()
   [[Project-Page]]()
   [[Code]]()
 
+
 - ****  
+  **  
   [[Paper]]()
   [[Project-Page]]()
   [[Code]]()
 
-- ****  
-  [[Paper]]()
-  [[Project-Page]]()
-  [[Code]]()
+
+
+
+
+
+
+
+
+
