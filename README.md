@@ -36,6 +36,13 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 ### 1.2 CV
 
+**<div style="text-align: center;">Understanding</div>**
+
+- **SpatialSense: An Adversarially Crowdsourced Benchmark for Spatial Relation Recognition**  
+  *a dataset specializing in spatial relation recognition which captures a broad spectrum of such challenges, allowing for proper benchmarking of computer vision techniques.*  
+  [[Paper]](https://arxiv.org/abs/1908.02660)
+  [[Code]](https://github.com/princeton-vl/SpatialSense)
+
 **<div style="text-align: center;">3D Reconstruction</div>**
 
 - **Light3R-SfM: Towards Feed-forward Structure-from-Motion**  
@@ -59,6 +66,12 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Paper]](https://arxiv.org/abs/2406.09756)
   [[Project-Page]](https://europe.naverlabs.com/blog/mast3r-matching-and-stereo-3d-reconstruction/)
   [[Code]](https://github.com/naver/mast3r)
+
+- **Know Your Neighbors: Improving Single-View Reconstruction via Spatial Vision-Language Reasoning**  
+  **  
+  [[Paper]](https://arxiv.org/abs/2404.03658)
+  [[Project-Page]](https://ruili3.github.io/kyn/)
+  [[Code]](https://github.com/ruili3/Know-Your-Neighbors)
 
 - **DUSt3R: Geometric 3D Vision Made Easy**  
   *DUSt3R, a radically novel paradigm for Dense and Unconstrained Stereo 3D Reconstruction of arbitrary image collections, i.e. operating without prior information about camera calibration nor viewpoint poses.*  
@@ -100,7 +113,6 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Paper]](https://arxiv.org/abs/1904.01201)
   [[Project-Page]](https://aihabitat.org/)
 
-
 - **RoboCasa: Large-Scale Simulation of Everyday Tasks for Generalist Robots**  
   *RoboCasa, a large-scale simulation framework for training generalist robots in everyday environments, features realistic and diverse scenes focusing on kitchen environments.*  
   [[Paper]](https://arxiv.org/abs/2406.02523)
@@ -139,11 +151,20 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://cambrian-mllm.github.io/)
   [[Code]](https://github.com/cambrian-mllm/cambrian)
 
+- **SpatialBot: Precise Spatial Understanding with Vision Language Models**  
+  *SpatialBot for better spatial understanding by feeding both RGB and depth images.*  
+  [[Paper]](https://arxiv.org/abs/2406.13642)
+  [[Code]](https://github.com/BAAI-DCAI/SpatialBot)
+
 - **SpatialRGPT: Grounded Spatial Reasoning in Vision Language Models**  
   *(1) a data curation pipeline that enables effective learning of regional representation from 3D scene graphs, and (2) a flexible plugin module for integrating depth information into the visual encoder of existing VLMs.*  
   [[Paper]](https://arxiv.org/abs/2406.01584)
   [[Project-Page]](https://www.anjiecheng.me/SpatialRGPT)
   [[Code]](https://github.com/AnjieCheng/SpatialRGPT)
+
+- **Learning to Localize Objects Improves Spatial Reasoning in Visual-LLMs**  
+  *discover optimal coordinate representations, data-efficient instruction fine-tuning objectives, and pseudo-data generation strategies that lead to improved spatial awareness in V-LLMs.*  
+  [[Paper]](https://arxiv.org/abs/2404.07449)
 
 - **SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities**  
   *an automatic 3D spatial VQA data generation framework that scales up to 2 billion VQA examples on 10 million real-world images. We then investigate various factors in the training recipe, including data quality, training pipeline, and VLM architecture.*  
@@ -395,6 +416,15 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://github.com/ai4ce/SPARE3D)
   [[Dataset-SPARE3D]](https://drive.google.com/drive/folders/1Mi2KZyKAlUOGYRQTDz3E5nhiXY5GhUB2)
 
+---
+**<div style="text-align: center;">2019</div>**
+
+- **SpatialSense: An Adversarially Crowdsourced Benchmark for Spatial Relation Recognition**  
+  *a dataset specializing in spatial relation recognition which captures a broad spectrum of such challenges, allowing for proper benchmarking of computer vision techniques.*  
+  [[Paper]](https://arxiv.org/abs/1908.02660)
+  [[Project-Page]](https://github.com/princeton-vl/SpatialSense)
+  [[Dataset-SpatialSense]](https://zenodo.org/records/8104370)
+
 ## 3. Spatial Intelligence Methods
 
 ### 3.1 old/mathematical/rule-based
@@ -402,6 +432,12 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 ### 3.2 Machine Learning
 
 ### 3.3 deep learning
+
+- **Can Transformers Capture Spatial Relations between Objects?**  
+  *approaches exploiting the long-range attention capabilities of transformers for spatial relationships task*  
+  [[Paper]](https://arxiv.org/abs/2403.00729)
+  [[Project-Page]](https://sites.google.com/view/spatial-relation)
+  [[Code]](https://github.com/AlvinWen428/spatial-relation-benchmark)
 
 ### 3.4 LLM
 
@@ -412,11 +448,54 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Paper]](https://arxiv.org/abs/2501.10074)
   [[Project-Page]](https://spatialcot.github.io/)
 
+- **Imagine while Reasoning in Space: Multimodal Visualization-of-Thought**  
+  *Multimodal Visualization-of-Thought (MVoT) enables visual thinking in MLLMs by generating image visualizations of their reasoning traces.*  
+  [[Paper]](https://arxiv.org/abs/2501.07542)
+  [[Code]](https://github.com/chengzu-li/MVoT)
+
 - **Perception Tokens Enhance Visual Reasoning in Multimodal Language Models**  
   *AURORA, a training method that augments MLMs with perception tokens for improved reasoning over visual inputs.*  
   [[Paper]](https://arxiv.org/abs/2412.03548)
   [[Project-Page]](https://aurora-perception.github.io/)
   [[Code]](https://github.com/mahtabbigverdi/Aurora-perception)
+
+- **Dspy-based Neural-Symbolic Pipeline to Enhance Spatial Reasoning in LLMs**  
+  *a novel neural-symbolic framework that enhances LLMs' spatial reasoning abilities through iterative feedback between LLMs and Answer Set Programming (ASP).*  
+  [[Paper]](https://arxiv.org/abs/2411.18564)
+
+- **Sparkle: Mastering Basic Spatial Capabilities in Vision Language Models Elicits Generalization to Spatial Reasoning**  
+  *a framework that uses synthetic data generation to provide targeted supervision for vision language models (VLMs) in three basic spatial capabilities, creating an instruction dataset for each capability.*  
+  [[Paper]](https://arxiv.org/abs/2410.16162)
+
+- **SpaRC and SpaRP: Spatial Reasoning Characterization and Path Generation for Understanding Spatial Reasoning Capability of Large Language Models**  
+  *a novel Spatial Reasoning Characterization (SpaRC) framework and Spatial Reasoning Paths (SpaRP) datasets, to enable an in-depth understanding of the spatial relations and compositions as well as the usefulness of spatial reasoning chains.*  
+  [[Paper]](https://arxiv.org/abs/2406.04566)
+  [[Code]](https://github.com/UKPLab/acl2024-sparc-and-sparp)
+
+- **Beyond Lines and Circles: Unveiling the Geometric Reasoning Gap in Large Language Models**  
+  *a framework that formulates an LLMs-based multi-agents system that enhances their existing reasoning potential by conducting an internal dialogue.*  
+  [[Paper]](https://arxiv.org/abs/2402.03877)
+  [[Code]](https://github.com/SpyrosMouselinos/GeometryAgents)
+
+- **Advancing Spatial Reasoning in Large Language Models: An In-Depth Evaluation and Enhancement Using the StepGame Benchmark**  
+  *provide a flawless solution to the benchmark by combining template-to-relation mapping with logic-based reasoning. *  
+  [[Paper]](https://arxiv.org/abs/2401.03991)
+  [[Code]](https://github.com/Fangjun-Li/SpatialLM-StepGame)
+
+**<div style="text-align: center;">Recognition</div>**
+
+- **Proximity QA: Unleashing the Power of Multi-Modal Large Language Models for Spatial Proximity Analysis**  
+  *Framework operates in two phases: the first phase focuses on guiding the models to understand the relative depth of objects, and the second phase further encourages the models to infer the proximity relationships between objects based on their depth perceptions.*  
+  [[Paper]](https://arxiv.org/abs/2401.17862)
+  [[Code]](https://github.com/NorthSummer/ProximityQA)
+
+- **3DAxiesPrompts: Unleashing the 3D Spatial Task Capabilities of GPT-4V**  
+  *By presenting images infused with the 3DAP visual prompt as inputs, we empower GPT-4V to ascertain the spatial positioning information of the given 3D target image with a high degree of precision.*  
+  [[Paper]](https://arxiv.org/abs//2312.09738)
+
+- **Improving Vision-and-Language Reasoning via Spatial Relations Modeling**  
+  *construct the spatial relation graph based on the given visual scenario.*  
+  [[Paper]](https://arxiv.org/abs/2311.05298)
 
 ---
 **<div style="text-align: center;">Reinforcement Learning</div>**
@@ -440,6 +519,22 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 - **Gemini Robotics: Bringing AI into the Physical World**  
   *Gemini Robotics-ER (Embodied Reasoning) extends Gemini's multimodal reasoning capabilities into the physical world, with enhanced spatial and temporal understanding.*  
   [[Paper]](https://arxiv.org/abs/2503.20020)
+
+- **VL-Nav: Real-time Vision-Language Navigation with Spatial Reasoning**  
+  *method integrates pixel-wise vision-language features with curiosity-driven exploration.*  
+  [[Paper]](https://arxiv.org/abs/2502.00931)
+  [[Project-Page]](https://sairlab.org/vlnav/)
+
+- **SpatialVLA: Exploring Spatial Representations for Visual-Language-Action Model**  
+  *introduce Ego3D Position Encoding to inject 3D information into the input observations of the visual-language-action model, and propose Adaptive Action Grids to represent spatial robot movement actions with adaptive discretized action grids, facilitating learning generalizable and transferrable spatial action knowledge for cross-robot control.*  
+  [[Paper]](https://arxiv.org/abs/2501.15830)
+  [[Project-Page]](https://spatialvla.github.io/)
+  [[Code]](https://github.com/SpatialVLA/SpatialVLA)
+
+- **Emma-X: An Embodied Multimodal Action Model with Grounded Chain of Thought and Look-ahead Spatial Reasoning**  
+  *the Embodied Multimodal Action Model with Grounded Chain of Thought and Look-ahead Spatial Reasoning*  
+  [[Paper]](https://arxiv.org/abs/2412.11974)
+  [[Code]](https://github.com/declare-lab/Emma-X)
 
 - **RoboSpatial: Teaching Spatial Understanding to 2D and 3D Vision-Language Models for Robotics**  
   *RoboSpatial, a large-scale dataset for spatial understanding in robotics. It consists of real indoor and tabletop scenes, captured as 3D scans and egocentric images, and annotated with rich spatial information relevant to robotics.*  
@@ -523,16 +618,11 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 
 
-
-
-
-
-
-
-
-
-
-
+- ****  
+  **  
+  [[Paper]]()
+  [[Project-Page]]()
+  [[Code]]()
 
 - ****  
   **  
@@ -548,11 +638,17 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Code]]()
 
 
+- ****  
+  **  
+  [[Paper]]()
+  [[Project-Page]]()
+  [[Code]]()
 
 
-
-
-
-
+- ****  
+  **  
+  [[Paper]]()
+  [[Project-Page]]()
+  [[Code]]()
 
 
