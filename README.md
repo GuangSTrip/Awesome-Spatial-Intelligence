@@ -10,10 +10,27 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 - [Introduction](#introduction)
 - [Table of Contents](#table-of-contents)
+- [Related Survey and Tutorial](#related-survey-and-tutorial)
 - [1. Spatial Intelligence in various areas/tasks](#1-spatial-intelligence-in-various-areastasks)
   - [1.1 NLP](#11-nlp)
+    - [1.1.1 Spatial Language Understanding](#111-spatial-language-understanding)
+      - [1.1.1.1 Spatial Representation](#1111-spatial-representation)
+      - [1.1.1.1.1 Natural Language Based](#11111-natural-language-based)
+      - [1.1.1.1.2 Spatial Role Lableing (SpRL)](#11112-spatial-role-lableing-sprl)
+      - [1.1.1.1.3 Qualitative Spatial Relations](#11113-qualitative-spatial-relations)
+      - [1.1.1.1.4 ISO-Space](#11114-iso-space)
+      - [1.1.1.1.5 Others](#11115-others)
+      - [1.1.1.2 Spatial Language Representation](#1112-spatial-language-representation)
+    - [1.1.2 Spatial Language Generation](#112-spatial-language-generation)
   - [1.2 CV](#12-cv)
+    - [1.2.1 Understanding](#121-understanding)
+    - [1.2.2 Depth Estimation](#122-depth-estimation)
+    - [1.2.3 3D Reconstruction](#123-3d-reconstruction)
+    - [1.2.4 Scene Generation](#124-scene-generation)
+    - [1.2.4 Spatial Simulation](#124-spatial-simulation)
   - [1.3 Multi-modal](#13-multi-modal)
+    - [1.3.1 Understanding](#131-understanding)
+    - [1.3.2 Spatial Reasoning](#132-spatial-reasoning)
   - [1.4 Others (radar/GPS etc.)](#14-others-radargps-etc)
 - [2. Datasets and Benchmarks](#2-datasets-and-benchmarks)
 - [3. Spatial Intelligence Methods](#3-spatial-intelligence-methods)
@@ -21,6 +38,9 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   - [3.2 Machine Learning](#32-machine-learning)
   - [3.3 deep learning](#33-deep-learning)
   - [3.4 LLM](#34-llm)
+    - [3.4.1 Spatial Reasoning](#341-spatial-reasoning)
+    - [3.4.2 Recognition](#342-recognition)
+    - [3.4.3 Reinforcement Learning](#343-reinforcement-learning)
 - [4. Application](#4-application)
   - [4.1 Robotics](#41-robotics)
   - [4.2 GIScience/Geo AI](#42-gisciencegeo-ai)
@@ -28,15 +48,107 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   - [4.4 AR/VR/XR](#44-arvrxr)
   - [4.5 Beyond AI](#45-beyond-ai)
   - [4.6 Integrated apps](#46-integrated-apps)
+    - [4.6.1 World Model](#461-world-model)
+    - [4.6.2 Others](#462-others)
+- [Other](#other)
 - [Reference Repository](#reference-repository)
+
+## Related Survey and Tutorial
+
+- **[Tutorial] Spatial and Temporal Language Understanding: Representation, Reasoning, and Grounding**  
+  *the cutting-edge research on spatial and temporal language understanding and its applications*  
+  [[Paper]](https://aclanthology.org/2020.emnlp-tutorials.5.pdf)
+  [[Tutorial-Page]](https://spatial-language-tutorial.github.io/)
 
 ## 1. Spatial Intelligence in various areas/tasks
 
 ### 1.1 NLP
 
+#### 1.1.1 Spatial Language Understanding
+
+- **Evaluating Spatial Understanding of Large Language Models**  
+  *design natural-language navigation tasks and evaluate the ability of LLMs*  
+  [[Paper]](https://arxiv.org/abs/2310.14540)
+  [[Code]](https://github.com/runopti/SpatialEvalLLM)
+
+##### 1.1.1.1 Spatial Representation
+
+##### 1.1.1.1.1 Natural Language Based
+
+- **A linguistic ontology of space for natural language processing**  
+  [[Paper]](https://www.sciencedirect.com/science/article/pii/S0004370210000858?via%3Dihub)
+
+- **The Fundamental System of Spatial Schemas in Language**  
+  [[Paper]](https://www.acsu.buffalo.edu/~talmy/talmyweb/Recent/hampevi.pdf)
+
+##### 1.1.1.1.2 Spatial Role Lableing (SpRL)
+
+- **Spatial Role Labeling: Task Definition and Annotation Scheme**  
+  [[Paper]](http://www.lrec-conf.org/proceedings/lrec2010/pdf/846_Paper.pdf)
+
+- **Spatial role labeling: Towards extraction of spatial relations from natural language**  
+  [[Paper]](https://dl.acm.org/doi/10.1145/2050104.2050105)
+
+- **UNITOR-HMM-TK: Structured Kernel-based Learning for Spatial Role Labeling**  
+  [[Paper]](https://aclanthology.org/S13-2096.pdf)
+
+- **Deep Embedding for Spatial Role Labeling**  
+  [[Paper]](https://arxiv.org/abs/1603.08474)
+
+- **Transfer Learning with Synthetic Corpora for Spatial Role Labeling and Reasoning**  
+  [[Paper]](https://arxiv.org/abs/2210.16952)
+
+- **From Spatial Relations to Spatial Configurations**  
+  [[Paper]](https://arxiv.org/abs/2007.09557)
+
+- **Spatial AMR: Expanded spatial annotation in the context of a grounded Minecraft corpus**  
+  [[Paper]](https://www.academia.edu/download/83342661/2020.lrec-1.601.pdf)
+
+- **A dataset of chest X-ray reports annotated with Spatial Role Labeling annotations**  
+  [[Paper]](https://www.sciencedirect.com/science/article/pii/S2352340920309501)
+
+- **SpatialNet: A Declarative Resource for Spatial Relations**  
+  [[Paper]](https://www.academia.edu/download/77510693/W19-1607.pdf)
+
+- **Rad-SpatialNet: A Frame-based Resource for Fine-Grained Spatial Relations in Radiology Reports**  
+  [[Paper]](https://www.academia.edu/download/77510608/2020.lrec-1.274.pdf)
+
+##### 1.1.1.1.3 Qualitative Spatial Relations
+
+- **Qualitative spatial representation and reasoning: An overview**  
+  [[Paper]](https://www.academia.edu/download/68031136/Qualitative_Spatial_Representation_and_R20210712-24613-1ye9z4j.pdf)
+
+- **Qualitative spatial reasoning: Cardinal directions as an example**  
+  [[Paper]](https://www.frank.gerastree.at/PublicationList/resources/docs/docsH/ijgis-frank.pdf)
+
+- **Learning to interpret spatial natural language in terms of qualitative spatial relations**  
+  [[Paper]](https://www.academia.edu/download/42762153/Learning_to_interpret_spatial_natural_la20160217-3141-5pstlm.pdf)
+
+##### 1.1.1.1.4 ISO-Space
+
+- **Integrating Motion Predicate Classes with Spatial and Temporal Annotations**  
+  [[Paper]](https://aclanthology.org/C08-2024.pdf)
+
+- **The Role of Model Testing in Standards Development: The Case of ISO-Space**  
+  [[Paper]](https://www.researchgate.net/profile/James-Pustejovsky/publication/267560950_The_Role_of_Model_Testing_in_Standards_Development_The_Case_of_ISO-Space/links/546c9b5b0cf21e510f63ebbf/The-Role-of-Model-Testing-in-Standards-Development-The-Case-of-ISO-Space.pdf)
+
+##### 1.1.1.1.5 Others
+
+- **SpatialML: annotation scheme, resources, and evaluation**  
+  [[Paper]](https://www.academia.edu/download/46836575/mani2010spatialml.pdf)
+
+##### 1.1.1.2 Spatial Language Representation
+
+- **StepGame: A New Benchmark for Robust Multi-Hop Spatial Reasoning in Texts**  
+  *a new Question-Answering dataset called StepGame for robust multi-hop spatial reasoning in texts*  
+  [[Paper]](https://arxiv.org/abs/2204.08292)
+  [[Code]](https://github.com/ShiZhengyan/StepGame)
+
+#### 1.1.2 Spatial Language Generation
+
 ### 1.2 CV
 
-**<div style="text-align: center;">Understanding</div>**
+#### 1.2.1 Understanding
 
 - **ImageNet3D: Towards General-Purpose Object-Level 3D Understanding**  
   *a large dataset for general-purpose object-level 3D understanding.*  
@@ -49,7 +161,53 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Paper]](https://arxiv.org/abs/1908.02660)
   [[Code]](https://github.com/princeton-vl/SpatialSense)
 
-**<div style="text-align: center;">3D Reconstruction</div>**
+- **Pri3D: Can 3D Priors Help 2D Representation Learning?**  
+  *employ contrastive learning under both multi-view im-age constraints and image-geometry constraints to encode3D priors into learned 2D representations*  
+  [[Paper]](https://arxiv.org/abs/2104.11225)
+  [[Code]](https://github.com/Sekunde/Pri3D)
+
+- **SpatialFormer: Towards Generalizable Vision Transformers with Explicit Spatial Understanding**  
+  *SpatialFormer, with explicit spatial understanding for generalizable image representation learning.*  
+  [[Paper]](https://link.springer.com/chapter/10.1007/978-3-031-72624-8_3)
+
+#### 1.2.2 Depth Estimation
+
+- **DepthMaster: Taming Diffusion Models for Monocular Depth Estimation**  
+  *a single-step diffusion model designed to adapt generative features for the discriminative depth estimation task.*  
+  [[Paper]](https://arxiv.org/abs/2501.02576)
+  [[Project-Page]](https://indu1ge.github.io/DepthMaster_page/)
+  [[Code]](https://github.com/indu1ge/DepthMaster)
+
+- **DepthLab: From Partial to Complete**  
+  *a foundation depth inpainting model powered by image diffusion priors.*  
+  [[Paper]](https://arxiv.org/abs/2412.18153)
+  [[Project-Page]](https://johanan528.github.io/depthlab_web/)
+  [[Code]](https://github.com/ant-research/DepthLab)
+
+- **Depth Anything V2**  
+  *The version produces much finer and more robust depth predictions compared to Depth Anything V1*  
+  [[Paper]](https://arxiv.org/abs/2406.09414)
+  [[Project-Page]](https://depth-anything-v2.github.io/)
+  [[Code]](https://github.com/DepthAnything/Depth-Anything-V2)
+
+- **Metric3Dv2: A Versatile Monocular Geometric Foundation Model for Zero-shot Metric Depth and Surface Normal Estimation**  
+  *a geometric foundation model for zero-shot metric depth and surface normal estimation from a single image, which is crucial for metric 3D recovery.*  
+  [[Paper]](https://arxiv.org/abs/2404.15506)
+  [[Project-Page]](https://jugghm.github.io/Metric3Dv2/)
+  [[Code]](https://github.com/YvanYin/Metric3D)
+
+- **Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data**  
+  *a highly practical solution for robust monocular depth estimation.*  
+  [[Paper]](https://arxiv.org/abs/2401.10891)
+  [[Project-Page]](https://depth-anything.github.io/)
+  [[Code]](https://github.com/LiheYoung/Depth-Anything)
+
+- **Metric3D: Towards Zero-shot Metric 3D Prediction from A Single Image**  
+  *a strong and robust geometry foundation model for high-quality and zero-shot metric depth and surface normal estimation from a single image.*  
+  [[Paper]](https://arxiv.org/abs/2307.10984)
+  [[Code]](https://github.com/YvanYin/Metric3D)
+
+#### 1.2.3 3D Reconstruction
 
 - **Light3R-SfM: Towards Feed-forward Structure-from-Motion**  
   *Light3R-SfM, a feed-forward, end-to-end learnable framework for efficient large-scale Structure-from-Motion (SfM) from unconstrained image collections.*  
@@ -85,8 +243,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://dust3r.europe.naverlabs.com/)
   [[Code]](https://github.com/naver/dust3r)
 
----
-**<div style="text-align: center;">Scene Generation</div>**
+#### 1.2.4 Scene Generation
 
 - **SceneCraft: Layout-Guided 3D Scene Generation**  
   *SceneCraft, a novel method for generating detailed indoor scenes that adhere to textual descriptions and spatial layout preferences provided by users.*  
@@ -105,8 +262,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://yueyang1996.github.io/holodeck/)
   [[Code]](https://github.com/allenai/Holodeck)
 
----
-**<div style="text-align: center;">Spatial Simulation</div>**
+#### 1.2.4 Spatial Simulation
 
 - **AI2-THOR: An Interactive 3D Environment for Visual AI**  
   *AI2-THOR consists of near photo-realistic 3D indoor scenes, where AI agents can navigate in the scenes and interact with objects to perform tasks.*  
@@ -127,7 +283,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 ### 1.3 Multi-modal
 
-**<div style="text-align: center;">Understanding</div>**
+#### 1.3.1 Understanding
 
 - **Seeing from Another Perspective: Evaluating Multi-View Understanding in MLLMs**  
   *show that MLLMs are particularly underperforming under two aspects: (1) cross-view correspondence for partially occluded views and (2) establishing the coarse camera poses.*  
@@ -184,8 +340,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://spatial-vlm.github.io/)
   [[Code]](https://github.com/remyxai/VQASynth)
 
----
-**<div style="text-align: center;">Spatial Reasoning</div>**
+#### 1.3.2 Spatial Reasoning
 
 - **Mind the Gap: Benchmarking Spatial Reasoning in Vision-Language Models**  
   *delineates the core elements of spatial reasoning: spatial relations, orientation and navigation, mental rotation, and spatial visualization, and then assesses the performance of these models in both synthetic and real-world images, bridging controlled and naturalistic contexts.*  
@@ -196,7 +351,6 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   *a novel benchmark, Open3DVQA, to comprehensively evaluate the spatial reasoning capacities of current state-of-the-art (SOTA) foundation models in open 3D space.*  
   [[Paper]](https://www.arxiv.org/abs/2503.11094)
   [[Code]](https://github.com/WeichenZh/Open3DVQA)
-
 
 ### 1.4 Others (radar/GPS etc.)
 
@@ -421,6 +575,11 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://github.com/XingruiWang/3D-Aware-VQA)
   [[Dataset-superclevr-3D-question]](https://github.com/XingruiWang/superclevr-3D-question)
 
+- **Evaluating Spatial Understanding of Large Language Models**  
+  *design natural-language navigation tasks and evaluate the ability of LLMs*  
+  [[Paper]](https://arxiv.org/abs/2310.14540)
+  [[Dataset-SpatialEvalLLM]](https://huggingface.co/datasets/yyamada/SpatialEvalLLM/tree/main)
+
 - **Open X-Embodiment: Robotic Learning Datasets and RT-X Models**  
   [[Paper]](https://arxiv.org/abs/2310.08864)
   [[Project-Page]](https://robotics-transformer-x.github.io/)
@@ -470,7 +629,6 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://xingruiwang.github.io/projects/DynSuperCLEVR/)
   [[Code]](https://github.com/XingruiWang/NS-4DPhysics)
 
-
 - **Can Transformers Capture Spatial Relations between Objects?**  
   *approaches exploiting the long-range attention capabilities of transformers for spatial relationships task*  
   [[Paper]](https://arxiv.org/abs/2403.00729)
@@ -484,7 +642,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 ### 3.4 LLM
 
-**<div style="text-align: center;">Spatial Reasoning</div>**
+#### 3.4.1 Spatial Reasoning
 
 - **Spatial-R1: Enhancing MLLMs in Video Spatial Reasoning**  
   *a targeted approach involving two key contributions: the curation of SR, a new video spatial reasoning dataset from ScanNet with automatically generated QA pairs across seven task types, and the application of Task-Specific Group Relative Policy Optimization (GRPO) for fine-tuning.*  
@@ -553,7 +711,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Paper]](https://arxiv.org/abs/2401.03991)
   [[Code]](https://github.com/Fangjun-Li/SpatialLM-StepGame)
 
-**<div style="text-align: center;">Recognition</div>**
+#### 3.4.2 Recognition
 
 - **Video-3D LLM: Learning Position-Aware Video Representation for 3D Scene Understanding**  
   *a novel generalist model for 3D scene understanding by treating 3D scenes as dynamic videos and incorporating 3D position encoding into these representations*  
@@ -573,15 +731,13 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   *construct the spatial relation graph based on the given visual scenario.*  
   [[Paper]](https://arxiv.org/abs/2311.05298)
 
----
-**<div style="text-align: center;">Reinforcement Learning</div>**
+#### 3.4.3 Reinforcement Learning
 
 - **Dream to Control: Learning Behaviors by Latent Imagination**  
   *Dreamer, a reinforcement learning agent that solves long-horizon tasks from images purely by latent imagination.*  
   [[Paper]](https://arxiv.org/abs/1912.01603)
   [[Project-Page]](https://danijar.com/project/dreamer/)
   [[Code]](https://github.com/danijar/dreamer)
-
 
 ## 4. Application
 
@@ -674,7 +830,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 ### 4.6 Integrated apps
 
-**<div style="text-align: center;">World Model</div>**
+#### 4.6.1 World Model
 
 - **Improving Transformer World Models for Data-Efficient RL**  
   *an approach to model-based RL that achieves a new state of the art performance on the challenging Craftax-classic benchmark, an open-world 2D survival game that requires agents to exhibit a wide range of general abilities*  
@@ -685,6 +841,18 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   *propose 3D-VLA by introducing a new family of embodied foundation models that seamlessly link 3D perception, reasoning, and action through a generative world model.*  
   [[Paper]](https://arxiv.org/abs/2403.09631)
   [[Project-Page]](https://vis-www.cs.umass.edu/3dvla/)
+
+#### 4.6.2 Others
+
+- **Spatial Speech Translation: Translating Across Space With Binaural Hearables**  
+  *a novel concept for hearables that translate speakers in the wearer's environment, while maintaining the direction and unique voice characteristics of each speaker in the binaural output.*  
+  [[Paper]](https://arxiv.org/abs/2504.18715)
+  [[Code]](https://github.com/chentuochao/Spatial-Speech-Translation)
+
+## Other
+
+- **Fei-Fei Li: With Spatial Intelligence, AI will Understand the Real World**  
+  [[Vedio-Page]](https://radical.vc/fei-fei-li-with-spatial-intelligence-ai-will-understand-the-real-world/)
 
 ## Reference Repository
 
