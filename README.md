@@ -15,26 +15,62 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   - [1.1 NLP](#11-nlp)
     - [1.1.1 Spatial Language Understanding](#111-spatial-language-understanding)
       - [1.1.1.1 Spatial Representation](#1111-spatial-representation)
-      - [1.1.1.1.1 Natural Language Based](#11111-natural-language-based)
-      - [1.1.1.1.2 Spatial Role Lableing (SpRL)](#11112-spatial-role-lableing-sprl)
-      - [1.1.1.1.3 Qualitative Spatial Relations](#11113-qualitative-spatial-relations)
-      - [1.1.1.1.4 ISO-Space](#11114-iso-space)
-      - [1.1.1.1.5 Others](#11115-others)
-      - [1.1.1.2 Spatial Language Representation](#1112-spatial-language-representation)
+        - [1.1.1.1.1 Natural Language Based](#11111-natural-language-based)
+        - [1.1.1.1.2 Spatial Role Lableing (SpRL)](#11112-spatial-role-lableing-sprl)
+        - [1.1.1.1.3 Qualitative Spatial Relations](#11113-qualitative-spatial-relations)
+        - [1.1.1.1.4 ISO-Space](#11114-iso-space)
+        - [1.1.1.1.5 Others](#11115-others)
+      - [1.1.1.2 Spatial Language Reasoning](#1112-spatial-language-reasoning)
     - [1.1.2 Spatial Language Generation](#112-spatial-language-generation)
   - [1.2 CV](#12-cv)
     - [1.2.1 Understanding](#121-understanding)
-    - [1.2.2 Depth Estimation](#122-depth-estimation)
-    - [1.2.3 3D Reconstruction](#123-3d-reconstruction)
-    - [1.2.4 Scene Generation](#124-scene-generation)
-    - [1.2.4 Spatial Simulation](#124-spatial-simulation)
+    - [1.2.2 Detection](#122-detection)
+    - [1.2.3 Depth Estimation](#123-depth-estimation)
+    - [1.2.4 3D Reconstruction](#124-3d-reconstruction)
+    - [1.2.5 Scene Generation](#125-scene-generation)
+    - [1.2.6 Spatial Simulation](#126-spatial-simulation)
+    - [1.2.7 Point Distribution](#127-point-distribution)
+    - [1.2.8 Object Positioning](#128-object-positioning)
+    - [1.2.9 Occupancy Prediction](#129-occupancy-prediction)
+    - [1.2.10 Scene Completion](#1210-scene-completion)
+    - [1.2.11 Segmentation](#1211-segmentation)
   - [1.3 Multi-modal](#13-multi-modal)
     - [1.3.1 Understanding](#131-understanding)
     - [1.3.2 Spatial Reasoning](#132-spatial-reasoning)
+    - [1.3.3 Navigation](#133-navigation)
   - [1.4 Others (radar/GPS etc.)](#14-others-radargps-etc)
 - [2. Datasets and Benchmarks](#2-datasets-and-benchmarks)
 - [3. Spatial Intelligence Methods](#3-spatial-intelligence-methods)
   - [3.1 old/mathematical/rule-based](#31-oldmathematicalrule-based)
+    - [3.1.1 Neural Radiance Fields](#311-neural-radiance-fields)
+      - [3.1.1.1 Survey](#3111-survey)
+      - [3.1.1.2 Basis](#3112-basis)
+        - [3.1.1.2.1 Neural Rendering Pretraining](#31121-neural-rendering-pretraining)
+        - [3.1.1.2.2 Signed Distance Function](#31122-signed-distance-function)
+      - [3.1.1.3 Downstream Tasks](#3113-downstream-tasks)
+        - [3.1.1.3.1 Detection](#31131-detection)
+        - [3.1.1.3.2 Segmentation](#31132-segmentation)
+        - [3.1.1.3.3 Navigation](#31133-navigation)
+    - [3.1.2 Gaussian Splatting](#312-gaussian-splatting)
+      - [3.1.2.1 Survey](#3121-survey)
+      - [3.1.2.2 Basis](#3122-basis)
+        - [3.1.2.2.1 Optimized Rendering](#31221-optimized-rendering)
+        - [3.1.2.2.2 Geometric and Material](#31222-geometric-and-material)
+        - [3.1.2.2.3 Physics Simulation](#31223-physics-simulation)
+      - [3.1.2.3 Scene Reconstruction](#3123-scene-reconstruction)
+        - [3.1.2.3.1 Dynamic Scene Reconstruction](#31231-dynamic-scene-reconstruction)
+        - [3.1.2.3.2 Large-Scale Scene Reconstruction](#31232-large-scale-scene-reconstruction)
+        - [3.1.2.3.3 Sparse-View Reconstruction](#31233-sparse-view-reconstruction)
+        - [3.1.2.3.4 Unposed Scene Reconstruction](#31234-unposed-scene-reconstruction)
+        - [3.1.2.3.5 Sparse-View Scene Extension](#31235-sparse-view-scene-extension)
+      - [3.1.2.4 Downstream Tasks](#3124-downstream-tasks)
+        - [3.1.2.4.1 Detection](#31241-detection)
+        - [3.1.2.4.2 Segmentation](#31242-segmentation)
+        - [3.1.2.4.3 Occupancy Prediction](#31243-occupancy-prediction)
+        - [3.1.2.4.4 Scene Graph Generation](#31244-scene-graph-generation)
+        - [3.1.2.4.5 Navigation](#31245-navigation)
+        - [3.1.2.4.6 SLAM](#31246-slam)
+      - [3.1.2.5 Gaussian Splatting based 3D Foundation Model](#3125-gaussian-splatting-based-3d-foundation-model)
   - [3.2 Machine Learning](#32-machine-learning)
   - [3.3 deep learning](#33-deep-learning)
   - [3.4 LLM](#34-llm)
@@ -73,7 +109,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 ##### 1.1.1.1 Spatial Representation
 
-##### 1.1.1.1.1 Natural Language Based
+###### 1.1.1.1.1 Natural Language Based
 
 - **A linguistic ontology of space for natural language processing**  
   [[Paper]](https://www.sciencedirect.com/science/article/pii/S0004370210000858?via%3Dihub)
@@ -81,7 +117,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 - **The Fundamental System of Spatial Schemas in Language**  
   [[Paper]](https://www.acsu.buffalo.edu/~talmy/talmyweb/Recent/hampevi.pdf)
 
-##### 1.1.1.1.2 Spatial Role Lableing (SpRL)
+###### 1.1.1.1.2 Spatial Role Lableing (SpRL)
 
 - **Spatial Role Labeling: Task Definition and Annotation Scheme**  
   [[Paper]](http://www.lrec-conf.org/proceedings/lrec2010/pdf/846_Paper.pdf)
@@ -113,7 +149,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 - **Rad-SpatialNet: A Frame-based Resource for Fine-Grained Spatial Relations in Radiology Reports**  
   [[Paper]](https://www.academia.edu/download/77510608/2020.lrec-1.274.pdf)
 
-##### 1.1.1.1.3 Qualitative Spatial Relations
+###### 1.1.1.1.3 Qualitative Spatial Relations
 
 - **Qualitative spatial representation and reasoning: An overview**  
   [[Paper]](https://www.academia.edu/download/68031136/Qualitative_Spatial_Representation_and_R20210712-24613-1ye9z4j.pdf)
@@ -124,7 +160,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 - **Learning to interpret spatial natural language in terms of qualitative spatial relations**  
   [[Paper]](https://www.academia.edu/download/42762153/Learning_to_interpret_spatial_natural_la20160217-3141-5pstlm.pdf)
 
-##### 1.1.1.1.4 ISO-Space
+###### 1.1.1.1.4 ISO-Space
 
 - **Integrating Motion Predicate Classes with Spatial and Temporal Annotations**  
   [[Paper]](https://aclanthology.org/C08-2024.pdf)
@@ -132,17 +168,26 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 - **The Role of Model Testing in Standards Development: The Case of ISO-Space**  
   [[Paper]](https://www.researchgate.net/profile/James-Pustejovsky/publication/267560950_The_Role_of_Model_Testing_in_Standards_Development_The_Case_of_ISO-Space/links/546c9b5b0cf21e510f63ebbf/The-Role-of-Model-Testing-in-Standards-Development-The-Case-of-ISO-Space.pdf)
 
-##### 1.1.1.1.5 Others
+###### 1.1.1.1.5 Others
 
 - **SpatialML: annotation scheme, resources, and evaluation**  
   [[Paper]](https://www.academia.edu/download/46836575/mani2010spatialml.pdf)
 
-##### 1.1.1.2 Spatial Language Representation
+##### 1.1.1.2 Spatial Language Reasoning
 
 - **StepGame: A New Benchmark for Robust Multi-Hop Spatial Reasoning in Texts**  
   *a new Question-Answering dataset called StepGame for robust multi-hop spatial reasoning in texts*  
   [[Paper]](https://arxiv.org/abs/2204.08292)
   [[Code]](https://github.com/ShiZhengyan/StepGame)
+
+- **Advancing Spatial Reasoning in Large Language Models: An In-Depth Evaluation and Enhancement Using the StepGame Benchmark**  
+  *provide a flawless solution to the benchmark by combining template-to-relation mapping with logic-based reasoning.*  
+  [[Paper]](https://arxiv.org/abs/2401.03991)
+  [[Code]](https://github.com/Fangjun-Li/SpatialLM-StepGame)
+
+- **Neuro-symbolic Training for Reasoning over Spatial Language**  
+  *propose training language models with neuro-symbolic techniques that exploit the spatial logical rules as constraints, providing additional supervision to improve spatial reasoning and question answering*  
+  [[Paper]](https://arxiv.org/abs/2406.13828)
 
 #### 1.1.2 Spatial Language Generation
 
@@ -170,7 +215,112 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   *SpatialFormer, with explicit spatial understanding for generalizable image representation learning.*  
   [[Paper]](https://link.springer.com/chapter/10.1007/978-3-031-72624-8_3)
 
-#### 1.2.2 Depth Estimation
+- **Probing the 3D Awareness of Visual Foundation Models**  
+  [[Paper]](https://arxiv.org/abs/2404.08636)
+  [[Code]](https://github.com/mbanani/probe3d)
+
+- **Improving 2D Feature Representations by 3D-Aware Fine-Tuning**  
+  [[Paper]](https://arxiv.org/abs/2407.20229)
+  [[Project-Page]](https://ywyue.github.io/FiT3D/)
+  [[Code]](https://github.com/ywyue/FiT3D)
+
+- **Near, far: Patch-ordering enhances vision foundation models' scene understanding**  
+  [[Paper]](https://arxiv.org/abs/2408.11054)
+  [[Project-Page]](https://vpariza.github.io/NeCo/)
+  [[Code]](https://github.com/vpariza/NeCo)
+
+- **Lexicon3D: Probing Visual Foundation Models for Complex 3D Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2409.03757)
+  [[Project-Page]](https://yunzeman.github.io/lexicon3d/)
+  [[Code]](https://github.com/YunzeMan/Lexicon3D)
+
+- **Feat2GS: Probing Visual Foundation Models with Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2412.09606)
+  [[Project-Page]](https://fanegg.github.io/Feat2GS/)
+  [[Code]](https://github.com/fanegg/Feat2GS)
+
+- **SimC3D: A Simple Contrastive 3D Pretraining Framework Using RGB Images**  
+  [[Paper]](https://arxiv.org/abs/2412.05274)
+
+- **Gaussian Masked Autoencoders**  
+  [[Paper]](https://arxiv.org/abs/2501.03229)
+  [[Project-Page]](https://brjathu.github.io/gmae/)
+
+- **EgoDTM: Towards 3D-Aware Egocentric Video-Language Pretraining**  
+  [[Paper]](https://arxiv.org/abs/2503.15470)
+  [[Code]](https://github.com/xuboshen/EgoDTM)
+
+- **Beyond Semantics: Rediscovering Spatial Awareness in Vision-Language Models**  
+  [[Paper]](https://arxiv.org/abs/2503.17349)
+  [[Project-Page]](https://user074.github.io/respatialaware/)
+
+- **PE3R: Perception-Efficient 3D Reconstruction**  
+  [[Paper]](https://arxiv.org/abs/2503.07507)
+  [[Code]](https://github.com/hujiecpp/PE3R)
+
+- **WildSeg3D: Segment Any 3D Objects in the Wild from 2D Images**  
+  [[Paper]](https://arxiv.org/abs/2503.08407)
+
+- **Detect Anything 3D in the Wild**  
+  [[Paper]](https://arxiv.org/abs/2504.07958)
+  [[Project-Page]](https://jjxjiaxue.github.io/DetAny3D/)
+
+- **Perception Encoder: The best visual embeddings are not at the output of the network**  
+  [[Paper]](https://arxiv.org/abs/2504.13181)
+  [[Code]](https://github.com/facebookresearch/perception_models)
+
+- **PerceptionLM: Open-Access Data and Models for Detailed Visual Understanding**  
+  [[Paper]](https://arxiv.org/abs/2504.13180)
+  [[Code]](https://github.com/facebookresearch/perception_models)
+
+- **Evolved Hierarchical Masking for Self-Supervised Learning**  
+  [[Paper]](https://arxiv.org/abs/2504.09155)
+
+- **I-Con: A Unifying Framework for Representation Learning**  
+  [[Paper]](https://arxiv.org/abs/2504.16929)
+  [[Project-Page]](https://mhamilton.net/icon)
+  [[Code]](https://github.com/ShadeAlsha/ICon)
+
+- **Stronger, Steadier & Superior: Geometric Consistency in Depth VFM Forges Domain Generalized Semantic Segmentation**  
+  [[Paper]](https://arxiv.org/abs/2504.12753)
+  [[Code]](https://github.com/anonymouse-xzrptkvyqc/DepthForge)
+
+#### 1.2.2 Detection
+
+- **BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers**  
+  [[Paper]](https://arxiv.org/abs/2203.17270)
+  [[Code]](https://github.com/fundamentalvision/BEVFormer)
+
+- **HV-BEV: Decoupling Horizontal and Vertical Feature Sampling for Multi-View 3D Object Detection**  
+  [[Paper]](https://arxiv.org/abs/2412.18884)
+
+- **Open Vocabulary Monocular 3D Object Detection**  
+  [[Paper]](https://arxiv.org/abs/2411.16833)
+  [[Project-Page]](https://uva-computer-vision-lab.github.io/ovmono3d/)
+  [[Code]](https://github.com/UVA-Computer-Vision-Lab/ovmono3d)
+
+- **UniDrive: Towards Universal Driving Perception Across Camera Configurations**  
+  [[Paper]](https://arxiv.org/abs/2410.13864)
+  [[Project-Page]](https://wzzheng.net/UniDrive/)
+  [[Code]](https://github.com/ywyeli/UniDrive)
+
+- **BEVDepth: Acquisition of Reliable Depth for Multi-view 3D Object Detection**  
+  [[Paper]](https://arxiv.org/abs/2206.10092)
+  [[Code]](https://github.com/Megvii-BaseDetection/BEVDepth)
+
+- **Training an Open-Vocabulary Monocular 3D Object Detection Model without 3D Data**  
+  [[Paper]](https://arxiv.org/abs/2411.15657)
+  [[Project-Page]](https://ovm3d-det.github.io/)
+  [[Code]](https://github.com/LeapLabTHU/OVM3D-Det)
+
+- **Towards Unified 3D Object Detection via Algorithm and Data Unification**  
+  [[Paper]](https://arxiv.org/abs/2402.18573)
+
+- **MonoDINO-DETR: Depth-Enhanced Monocular 3D Object Detection Using a Vision Foundation Model**  
+  [[Paper]](https://arxiv.org/abs/2502.00315)
+  [[Code]](https://github.com/JihyeokKim/MonoDINO-DETR)
+
+#### 1.2.3 Depth Estimation
 
 - **DepthMaster: Taming Diffusion Models for Monocular Depth Estimation**  
   *a single-step diffusion model designed to adapt generative features for the discriminative depth estimation task.*  
@@ -207,7 +357,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Paper]](https://arxiv.org/abs/2307.10984)
   [[Code]](https://github.com/YvanYin/Metric3D)
 
-#### 1.2.3 3D Reconstruction
+#### 1.2.4 3D Reconstruction
 
 - **Light3R-SfM: Towards Feed-forward Structure-from-Motion**  
   *Light3R-SfM, a feed-forward, end-to-end learnable framework for efficient large-scale Structure-from-Motion (SfM) from unconstrained image collections.*  
@@ -243,7 +393,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://dust3r.europe.naverlabs.com/)
   [[Code]](https://github.com/naver/dust3r)
 
-#### 1.2.4 Scene Generation
+#### 1.2.5 Scene Generation
 
 - **SceneCraft: Layout-Guided 3D Scene Generation**  
   *SceneCraft, a novel method for generating detailed indoor scenes that adhere to textual descriptions and spatial layout preferences provided by users.*  
@@ -262,7 +412,7 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://yueyang1996.github.io/holodeck/)
   [[Code]](https://github.com/allenai/Holodeck)
 
-#### 1.2.4 Spatial Simulation
+#### 1.2.6 Spatial Simulation
 
 - **AI2-THOR: An Interactive 3D Environment for Visual AI**  
   *AI2-THOR consists of near photo-realistic 3D indoor scenes, where AI agents can navigate in the scenes and interact with objects to perform tasks.*  
@@ -280,6 +430,112 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Paper]](https://arxiv.org/abs/2406.02523)
   [[Project-Page]](https://robocasa.ai/)
   [[Code]](https://github.com/robocasa/robocasa)
+
+#### 1.2.7 Point Distribution
+
+#### 1.2.8 Object Positioning
+
+#### 1.2.9 Occupancy Prediction
+
+- **VoxFormer: Sparse Voxel Transformer for Camera-based 3D Semantic Scene Completion**  
+  [[Paper]](https://arxiv.org/abs/2302.12251)
+  [[Code]](https://github.com/NVlabs/VoxFormer)
+
+- **Tri-Perspective View for Vision-Based 3D Semantic Occupancy Prediction**  
+  [[Paper]](https://arxiv.org/abs/2302.07817)
+  [[Project-Page]](https://wzzheng.net/TPVFormer/)
+  [[Code]](https://github.com/wzzheng/TPVFormer)
+
+- **OctreeOcc: Efficient and Multi-Granularity Occupancy Prediction Using Octree Queries**  
+  [[Paper]](https://arxiv.org/abs/2312.03774)
+  [[Code]](https://github.com/4DVLab/OctreeOcc)
+
+- **OccFormer: Dual-path Transformer for Vision-based 3D Semantic Occupancy Prediction**  
+  [[Paper]](https://arxiv.org/abs/2304.05316)
+  [[Code]](https://github.com/zhangyp15/OccFormer)
+
+- **SparseOcc: Rethinking Sparse Latent Representation for Vision-Based Semantic Occupancy Prediction**  
+  [[Paper]](https://arxiv.org/abs/2404.09502)
+  [[Project-Page]](https://pintang1999.github.io/sparseocc.html)
+  [[Code]](https://github.com/VISION-SJTU/SparseOcc)
+
+- **LowRankOcc: Tensor Decomposition and Low-Rank Recovery for Vision-Based 3D Semantic Occupancy Prediction**  
+  [[Paper]](http://openaccess.thecvf.com/content/CVPR2024/papers/Zhao_LowRankOcc_Tensor_Decomposition_and_Low-Rank_Recovery_for_Vision-based_3D_Semantic_CVPR_2024_paper.pdf)
+
+- **SelfOcc: Self-Supervised Vision-Based 3D Occupancy Prediction**  
+  [[Paper]](https://arxiv.org/abs/2311.12754)
+  [[Project-Page]](https://huang-yh.github.io/SelfOcc/)
+  [[Code]](https://github.com/huang-yh/SelfOcc)
+
+- **Monocular Occupancy Prediction for Scalable Indoor Scenes**  
+  [[Paper]](https://arxiv.org/abs/2407.11730)
+  [[Project-Page]](https://hongxiaoy.github.io/ISO/)
+  [[Code]](https://github.com/hongxiaoy/ISO)
+
+- **OPUS: Occupancy Prediction Using a Sparse Set**  
+  [[Paper]](https://arxiv.org/abs/2409.09350)
+  [[Code]](https://github.com/jbwang1997/OPUS)
+
+- **Fast Occupancy Network**  
+  [[Paper]](https://arxiv.org/abs/2412.07163)
+
+- **Lightweight Spatial Embedding for Vision-based 3D Occupancy Prediction**  
+  [[Paper]](https://arxiv.org/abs/2412.05976)
+
+- **ViPOcc: Leveraging Visual Priors from Vision Foundation Models for Single-View 3D Occupancy Prediction**  
+  [[Paper]](https://arxiv.org/abs/2412.11210)
+  [[Project-Page]](https://mias.group/ViPOcc/)
+  [[Code]](https://github.com/fengyi233/ViPOcc)
+
+- **LOMA: Language-assisted Semantic Occupancy Network via Triplane Mamba**  
+  [[Paper]](https://arxiv.org/abs/2412.08388)
+
+- **Semi-Supervised Vision-Centric 3D Occupancy World Model for Autonomous Driving**  
+  [[Paper]](https://arxiv.org/abs/2502.07309)
+  [[Code]](https://github.com/getterupper/PreWorld)
+
+- **SliceOcc: Indoor 3D Semantic Occupancy Prediction with Vertical Slice Representation**  
+  [[Paper]](https://arxiv.org/abs/2501.16684)
+  [[Code]](https://github.com/NorthSummer/SliceOcc)
+
+#### 1.2.10 Scene Completion
+
+- **Semantic Scene Completion from a Single Depth Image**  
+  [[Paper]](https://arxiv.org/abs/1611.08974)
+
+- **MonoScene: Monocular 3D Semantic Scene Completion**  
+  [[Paper]](https://arxiv.org/abs/2112.00726)
+  [[Project-Page]](https://astra-vision.github.io/MonoScene/)
+  [[Code]](https://github.com/astra-vision/MonoScene)
+
+- **OccDepth: A Depth-Aware Method for 3D Semantic Scene Completion**  
+  [[Paper]](https://arxiv.org/abs/2302.13540)
+  [[Code]](https://github.com/megvii-research/OccDepth)
+
+- **NDC-Scene: Boost Monocular 3D Semantic Scene Completion in Normalized Device Coordinates Space**  
+  [[Paper]](https://arxiv.org/abs/2309.14616)
+  [[Project-Page]](https://jiawei-yao0812.github.io/NDC-Scene/)
+  [[Code]](https://github.com/Jiawei-Yao0812/NDCScene)
+
+- **Not All Voxels Are Equal: Hardness-Aware Semantic Scene Completion with Self-Distillation**  
+  [[Paper]](https://arxiv.org/abs/2404.11958)
+  [[Code]](https://github.com/songw-zju/HASSC)
+
+- **Symphonize 3D Semantic Scene Completion with Contextual Instance Queries**  
+  [[Paper]](https://arxiv.org/abs/2306.15670)
+  [[Code]](https://github.com/hustvl/Symphonies)
+
+- **SGFormer: Satellite-Ground Fusion for 3D Semantic Scene Completion**  
+  [[Paper]](https://arxiv.org/abs/2503.16825)
+  [[Project-Page]](https://zju3dv.github.io/sgformer/)
+  [[Code]](https://github.com/gxytcrc/SGFormer)
+
+#### 1.2.11 Segmentation
+
+- **OnlineAnySeg: Online Zero-Shot 3D Segmentation by Visual Foundation Model Guided 2D Mask Merging**  
+  [[Paper]](https://arxiv.org/abs/2503.01309)
+  [[Project]](https://yjtang249.github.io/OnlineAnySeg/)
+  [[Code]](https://github.com/yjtang249/OnlineAnySeg)
 
 ### 1.3 Multi-modal
 
@@ -351,6 +607,44 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   *a novel benchmark, Open3DVQA, to comprehensively evaluate the spatial reasoning capacities of current state-of-the-art (SOTA) foundation models in open 3D space.*  
   [[Paper]](https://www.arxiv.org/abs/2503.11094)
   [[Code]](https://github.com/WeichenZh/Open3DVQA)
+
+#### 1.3.3 Navigation
+
+- **Navigation Instruction Generation with BEV Perception and Large Language Models**  
+  [[Paper]](https://arxiv.org/abs/2407.15087)
+  [[Code]](https://github.com/FanScy/BEVInstructor)
+
+- **RoomTour3D: Geometry-Aware Video-Instruction Tuning for Embodied Navigation**  
+  [[Paper]](https://arxiv.org/abs/2412.08591)
+  [[Project-Page]](https://roomtour3d.github.io/)
+  [[Code]](https://github.com/roomtour3d/roomtour3d-NaviLLM)
+
+- **FrontierNet: Learning Visual Cues to Explore**  
+  [[Paper]](https://arxiv.org/abs/2501.04597)
+  [[Code]](https://github.com/cvg/FrontierNet)
+
+- **MapNav: A Novel Memory Representation via Annotated Semantic Maps for VLM-based Vision-and-Language Navigation**  
+  [[Paper]](https://arxiv.org/abs/2502.13451)
+
+- ****  
+  [[Paper]]()
+  [[Project-Page]]()
+  [[Code]]()
+
+- ****  
+  [[Paper]]()
+  [[Project-Page]]()
+  [[Code]]()
+
+- ****  
+  [[Paper]]()
+  [[Project-Page]]()
+  [[Code]]()
+
+- ****  
+  [[Paper]]()
+  [[Project-Page]]()
+  [[Code]]()
 
 ### 1.4 Others (radar/GPS etc.)
 
@@ -614,6 +908,540 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 ### 3.1 old/mathematical/rule-based
 
+#### 3.1.1 Neural Radiance Fields
+
+##### 3.1.1.1 Survey
+
+- **NeRF in Robotics: A Survey**  
+  [[Paper]](https://arxiv.org/abs/2405.01333)
+  [[Project-Page]]()
+  [[Code]]()
+
+##### 3.1.1.2 Basis
+
+###### 3.1.1.2.1 Neural Rendering Pretraining
+
+- **NeRF-MAE: Masked AutoEncoders for Self-Supervised 3D Representation Learning for Neural Radiance Fields**  
+  [[Paper]](https://arxiv.org/abs/2404.01300)
+  [[Project-Page]](https://nerf-mae.github.io/)
+  [[Code]](https://github.com/zubair-irshad/NeRF-MAE)
+
+- **UniPAD: A Universal Pre-training Paradigm for Autonomous Driving**  
+  [[Paper]](https://arxiv.org/abs/2310.08370)
+  [[Code]](https://github.com/Nightmare-n/UniPAD)
+
+- **Ponder: Point Cloud Pre-training via Neural Rendering**  
+  [[Paper]](https://arxiv.org/abs/2301.00157)
+
+- **PonderV2: Pave the Way for 3D Foundation Model with A Universal Pre-training Paradigm**  
+  [[Paper]](https://arxiv.org/abs/2310.08586)
+  [[Code]](https://github.com/OpenGVLab/PonderV2)
+
+- **SPA: 3D Spatial-Awareness Enables Effective Embodied Representation**  
+  [[Paper]](https://arxiv.org/abs/2410.08208)
+  [[Project-Page]](https://haoyizhu.github.io/spa/)
+  [[Code]](https://github.com/HaoyiZhu/SPA)
+
+###### 3.1.1.2.2 Signed Distance Function
+
+- **NeuS: Learning Neural Implicit Surfaces by Volume Rendering for Multi-view Reconstruction**  
+  [[Paper]](https://arxiv.org/abs/2106.10689)
+
+- **NeuS: Learning Neural Implicit Surfaces by Volume Rendering for Multi-view Reconstruction**  
+  [[Paper]](https://arxiv.org/abs/2106.10689)
+
+##### 3.1.1.3 Downstream Tasks
+
+###### 3.1.1.3.1 Detection
+
+- **NeRF-Det++: Incorporating Semantic Cues and Perspective-aware Depth Supervision for Indoor Multi-View 3D Detection**  
+  [[Paper]](https://arxiv.org/abs/2402.14464)
+  [[Code]](https://github.com/mrsempress/NeRF-Detplusplus)
+
+###### 3.1.1.3.2 Segmentation
+
+- **Decomposing NeRF for Editing via Feature Field Distillation**  
+  [[Paper]](https://arxiv.org/abs/2205.15585)
+  [[Project-Page]](https://pfnet-research.github.io/distilled-feature-fields/)
+  [[Code]](https://github.com/pfnet-research/distilled-feature-fields)
+
+- **3D Concept Learning and Reasoning from Multi-View Images**  
+  [[Paper]](https://arxiv.org/abs/2303.11327)
+  [[Code]](https://github.com/evelinehong/3D-CLR-Official)
+
+- **Learning 3D Scene Priors with 2D Supervision**  
+  [[Paper]](https://arxiv.org/abs/2211.14157)
+  [[Project-Page]](https://yinyunie.github.io/sceneprior-page/)
+  [[Code]](https://github.com/yinyunie/ScenePriors)
+
+- **LERF: Language Embedded Radiance Fields**  
+  [[Paper]](https://arxiv.org/abs/2303.09553)
+  [[Project-Page]](https://www.lerf.io/)
+  [[Code]](https://github.com/kerrj/lerf)
+
+- **OV-NeRF: Open-vocabulary Neural Radiance Fields with Vision and Language Foundation Models for 3D Semantic Understanding**  
+  [[Paper]](https://arxiv.org/abs/2402.04648)
+  [[Code]](https://github.com/pcl3dv/OV-NeRF)
+
+- **ConDense: Consistent 2D/3D Pre-training for Dense and Sparse Features from Multi-View Images**  
+  [[Paper]](https://arxiv.org/abs/2408.17027)
+
+- **O2V-Mapping: Online Open-Vocabulary Mapping with Neural Implicit Representation**  
+  [[Paper]](https://arxiv.org/abs/2404.06836)
+  [[Code]](https://github.com/Fudan-MAGIC-Lab/O2Vmapping)
+
+###### 3.1.1.3.3 Navigation
+
+- **Lookahead Exploration with Neural Radiance Representation for Continuous Vision-Language Navigation**  
+  [[Paper]](https://arxiv.org/abs/2404.01943)
+  [[Code]](https://github.com/MrZihan/HNR-VLN)
+
+#### 3.1.2 Gaussian Splatting
+
+##### 3.1.2.1 Survey
+
+- **A Survey on 3D Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2401.03890)
+  [[Project-Page]](https://github.com/guikunchen/Awesome3DGS)
+
+- **3D Gaussian Splatting in Robotics: A Survey**  
+  [[Paper]](https://arxiv.org/abs/2410.12262)
+  [[Project-Page]](https://github.com/zstsandy/Awesome-3D-Gaussian-Splatting-in-Robotics)
+
+##### 3.1.2.2 Basis
+
+###### 3.1.2.2.1 Optimized Rendering
+
+- **2D Gaussian Splatting for Geometrically Accurate Radiance Fields**  
+  [[Paper]](https://arxiv.org/abs/2403.17888)
+  [[Project-Page]](https://surfsplatting.github.io/)
+  [[Code]](https://github.com/hbb1/2d-gaussian-splatting)
+
+- **pixelSplat: 3D Gaussian Splats from Image Pairs for Scalable Generalizable 3D Reconstruction**  
+  [[Paper]](https://arxiv.org/abs/2312.12337)
+  [[Project-Page]](https://davidcharatan.com/pixelsplat/)
+  [[Code]](https://github.com/dcharatan/pixelsplat)
+
+- **Scaffold-GS: Structured 3D Gaussians for View-Adaptive Rendering**  
+  [[Paper]](https://arxiv.org/abs/2312.00109)
+  [[Project-Page]](https://city-super.github.io/scaffold-gs/)
+  [[Code]](https://github.com/city-super/Scaffold-GS)
+
+- **Octree-GS: Towards Consistent Real-time Rendering with LOD-Structured 3D Gaussians**  
+  [[Paper]](https://arxiv.org/abs/2403.17898)
+  [[Project-Page]](https://city-super.github.io/octree-gs/)
+  [[Code]](https://github.com/city-super/Octree-GS)
+
+- **Sparse Voxels Rasterization: Real-time High-fidelity Radiance Field Rendering**  
+  [[Paper]](https://arxiv.org/abs/2412.04459)
+  [[Project-Page]](https://svraster.github.io/)
+  [[Code]](https://github.com/NVlabs/svraster)
+
+- **Latent Radiance Fields with 3D-aware 2D Representations**  
+  [[Paper]](https://arxiv.org/abs/2502.09613)
+  [[Project-Page]](https://latent-radiance-field.github.io/LRF/)
+  [[Code]](https://github.com/ChaoyiZh/latent-radiance-field)
+
+- **NeuralGS: Bridging Neural Fields and 3D Gaussian Splatting for Compact 3D Representations**  
+  [[Paper]](https://arxiv.org/abs/2503.23162)
+  [[Project-Page]](https://pku-yuangroup.github.io/NeuralGS/)
+  [[Code]](https://github.com/PKU-YuanGroup/NeuralGS)
+
+###### 3.1.2.2.2 Geometric and Material
+
+- **SuGaR: Surface-Aligned Gaussian Splatting for Efficient 3D Mesh Reconstruction and High-Quality Mesh Rendering**  
+  [[Paper]](https://arxiv.org/abs/2311.12775)
+  [[Project-Page]](https://anttwo.github.io/sugar/)
+  [[Code]](https://github.com/Anttwo/SuGaR)
+
+- **NeuSG: Neural Implicit Surface Reconstruction with 3D Gaussian Splatting Guidance**  
+  [[Paper]](https://arxiv.org/abs/2312.00846)
+
+- **GSDF: 3DGS Meets SDF for Improved Rendering and Reconstruction**  
+  [[Paper]](https://arxiv.org/abs/2403.16964)
+  [[Project-Page]](https://city-super.github.io/GSDF/)
+  [[Code]](https://github.com/city-super/GSDF)
+
+- **3DGSR: Implicit Surface Reconstruction with 3D Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2404.00409)
+
+- **GS-ROR^2: Bidirectional-guided 3DGS and SDF for Reflective Object Relighting and Reconstruction**  
+  [[Paper]](https://arxiv.org/abs/2406.18544)
+
+- **SplatSDF: Boosting Neural Implicit SDF via Gaussian Splatting Fusion**  
+  [[Paper]](https://arxiv.org/abs/2411.15468)
+  [[Project-Page]](https://blarklee.github.io/splatsdf/)
+
+- **GLS: Geometry-aware 3D Language Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2411.18066)
+  [[Project-Page]](https://jiaxiongq.github.io/GLS_ProjectPage/)
+  [[Code]](https://github.com/JiaxiongQ/GLS)
+
+- **FeatureGS: Eigenvalue-Feature Optimization in 3D Gaussian Splatting for Geometrically Accurate and Artifact-Reduced Reconstruction**  
+  [[Paper]](https://arxiv.org/abs/2501.17655)
+
+###### 3.1.2.2.3 Physics Simulation
+
+- **OmniPhysGS: 3D Constitutive Gaussians for General Physics-Based Dynamics Generation**  
+  [[Paper]](https://arxiv.org/abs/2501.18982)
+  [[Project-Page]](https://wgsxm.github.io/projects/omniphysgs/)
+  [[Code]](https://github.com/wgsxm/OmniPhysGS)
+
+- **From Sparse to Dense: Camera Relocalization with Scene-Specific Detector from Feature Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2503.19358)
+  [[Project-Page]](https://zju3dv.github.io/STDLoc/)
+  [[Code]](https://github.com/zju3dv/STDLoc)
+
+- **DecoupledGaussian: Object-Scene Decoupling for Physics-Based Interaction**  
+  [[Paper]](https://arxiv.org/abs/2503.05484)
+  [[Project-Page]](https://wangmiaowei.github.io/DecoupledGaussian.github.io/)
+  [[Code]](https://github.com/wangmiaowei/DecoupledGaussian/tree/main)
+
+##### 3.1.2.3 Scene Reconstruction
+
+###### 3.1.2.3.1 Dynamic Scene Reconstruction
+
+- **4D Gaussian Splatting for Real-Time Dynamic Scene Rendering**  
+  [[Paper]](https://arxiv.org/abs/2310.08528)
+  [[Project-Page]](https://guanjunwu.github.io/4dgs/)
+  [[Code]](https://github.com/hustvl/4DGaussians)
+
+- **GaussianVideo: Efficient Video Representation via Hierarchical Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2501.04782)
+  [[Project-Page]](https://cyberiada.github.io/GaussianVideo/)
+
+- **1000+ FPS 4D Gaussian Splatting for Dynamic Scene Rendering**  
+  [[Paper]](https://arxiv.org/abs/2503.16422)
+  [[Project-Page]](https://4dgs-1k.github.io/)
+
+- **MoDec-GS: Global-to-Local Motion Decomposition and Temporal Interval Adjustment for Compact Dynamic 3D Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2501.03714)
+  [[Project-Page]](https://kaist-viclab.github.io/MoDecGS-site/)
+
+- **Seeing World Dynamics in a Nutshell**  
+  [[Paper]](https://arxiv.org/abs/2502.03465)
+  [[Code]](https://github.com/Nut-World/NutWorld)
+
+- **Instant Gaussian Stream: Fast and Generalizable Streaming of Dynamic Scene Reconstruction via Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2503.16979)
+
+- **Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction**  
+  [[Paper]](https://arxiv.org/abs/2504.07961)
+  [[Project-Page]](https://geo4d.github.io/)
+  [[Code]](http://github.com/jzr99/Geo4D)
+
+###### 3.1.2.3.2 Large-Scale Scene Reconstruction
+
+- **VastGaussian: Vast 3D Gaussians for Large Scene Reconstruction**  
+  [[Paper]](https://arxiv.org/abs/2402.17427)
+  [[Project-Page]](https://vastgaussian.github.io/)
+
+- **CityGaussian: Real-time High-quality Large-Scale Scene Rendering with Gaussians**  
+  [[Paper]](https://arxiv.org/abs/2404.01133)
+  [[Project-Page]](https://dekuliutesla.github.io/citygs/)
+  [[Code]](https://github.com/Linketic/CityGaussian)
+
+- **OccluGaussian: Occlusion-Aware Gaussian Splatting for Large Scene Reconstruction and Rendering**  
+  [[Paper]](https://arxiv.org/abs/2503.16177)
+  [[Project-Page]](https://occlugaussian.github.io/)
+
+###### 3.1.2.3.3 Sparse-View Reconstruction
+
+- **MVSplat: Efficient 3D Gaussian Splatting from Sparse Multi-View Images**  
+  [[Paper]](https://arxiv.org/abs/2403.14627)
+  [[Project-Page]](https://donydchen.github.io/mvsplat)
+  [[Code]](https://github.com/donydchen/mvsplat)
+
+- **TranSplat: Generalizable 3D Gaussian Splatting from Sparse Multi-View Images with Transformers**  
+  [[Paper]](https://arxiv.org/abs/2408.13770)
+  [[Project-Page]](https://xingyoujun.github.io/transplat/)
+  [[Code]](https://github.com/xingyoujun/transplat)
+
+- **PixelGaussian: Generalizable 3D Gaussian Reconstruction from Arbitrary Views**  
+  [[Paper]](https://arxiv.org/abs/2410.18979)
+  [[Project-Page]](https://wzzheng.net/PixelGaussian/)
+  [[Code]](https://github.com/Barrybarry-Smith/PixelGaussian)
+
+- **Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image**  
+  [[Paper]](https://arxiv.org/abs/2406.04343)
+  [[Project-Page]](https://www.robots.ox.ac.uk/~vgg/research/flash3d/)
+  [[Code]](https://github.com/eldar/flash3d)
+
+- **FatesGS: Fast and Accurate Sparse-View Surface Reconstruction using Gaussian Splatting with Depth-Feature Consistency**  
+  [[Paper]](https://arxiv.org/abs/2501.04628)
+  [[Project-Page]](https://alvin528.github.io/FatesGS/)
+  [[Code]](https://github.com/yulunwu0108/FatesGS)
+
+- **SplatFormer: Point Transformer for Robust 3D Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2411.06390)
+  [[Project-Page]](https://sergeyprokudin.github.io/splatformer/)
+  [[Code]](https://github.com/ChenYutongTHU/SplatFormer)
+
+###### 3.1.2.3.4 Unposed Scene Reconstruction
+
+- **Splatt3R: Zero-shot Gaussian Splatting from Uncalibrated Image Pairs**  
+  [[Paper]](https://arxiv.org/abs/2408.13912)
+  [[Project-Page]](https://splatt3r.active.vision/)
+  [[Code]](https://github.com/btsmart/splatt3r)
+
+- **No Pose, No Problem: Surprisingly Simple 3D Gaussian Splats from Sparse Unposed Images**  
+  [[Paper]](https://arxiv.org/abs/2410.24207)
+  [[Project-Page]](https://noposplat.github.io/)
+  [[Code]](https://github.com/cvg/NoPoSplat)
+
+- **VicaSplat: A Single Run is All You Need for 3D Gaussian Splatting and Camera Estimation from Unposed Video Frames**  
+  [[Paper]](https://arxiv.org/abs/2503.10286)
+  [[Project-Page]](https://lizhiqi49.github.io/VicaSplat/)
+  [[Code]](https://github.com/WU-CVGL/VicaSplat)
+
+- **FLARE: Feed-forward Geometry, Appearance and Camera Estimation from Uncalibrated Sparse Views**  
+  [[Paper]](https://arxiv.org/abs/2502.12138)
+  [[Project-Page]](https://zhanghe3z.github.io/FLARE/)
+  [[Code]](https://github.com/ant-research/FLARE)
+
+- **Coca-Splat: Collaborative Optimization for Camera Parameters and 3D Gaussians**  
+  [[Paper]](https://arxiv.org/abs/2504.00639)
+
+###### 3.1.2.3.5 Sparse-View Scene Extension
+
+- **Taming Video Diffusion Prior with Scene-Grounding Guidance for 3D Gaussian Splatting from Sparse Inputs**  
+  [[Paper]](https://arxiv.org/abs/2503.05082)
+  [[Project-Page]](https://zhongyingji.github.io/guidevd-3dgs/)
+  [[Code]](https://github.com/zhongyingji/guidedvd-3dgs)
+
+- **ExScene: Free-View 3D Scene Reconstruction with Gaussian Splatting from a Single Image**  
+  [[Paper]](https://arxiv.org/abs/2503.23881)
+
+- **Free360: Layered Gaussian Splatting for Unbounded 360-Degree View Synthesis from Extremely Sparse and Unposed Views**  
+  [[Paper]](https://arxiv.org/abs/2503.24382)
+  [[Project-Page]](https://zju3dv.github.io/free360/)
+  [[Code]](https://github.com/chobao/Free360)
+
+- **ERUPT: Efficient Rendering with Unposed Patch Transformer**  
+  [[Paper]](https://arxiv.org/abs/2503.24374)
+
+##### 3.1.2.4 Downstream Tasks
+
+###### 3.1.2.4.1 Detection
+
+- **3DGS-DET: Empower 3D Gaussian Splatting with Boundary Guidance and Box-Focused Sampling for 3D Object Detection**  
+  [[Paper]](https://arxiv.org/abs/2410.01647)
+  [[Code]](https://github.com/yangcaoai/3DGS-DET)
+
+###### 3.1.2.4.2 Segmentation
+
+- **Segment Any 3D Gaussians**  
+  [[Paper]](https://arxiv.org/abs/2312.00860)
+  [[Project-Page]](https://jumpat.github.io/SAGA/)
+  [[Code]](https://github.com/Jumpat/SegAnyGAussians)
+
+- **LangSplat: 3D Language Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2312.16084)
+  [[Project-Page]](https://langsplat.github.io/)
+  [[Code]](https://github.com/minghanqin/LangSplat)
+
+- **Feature 3DGS: Supercharging 3D Gaussian Splatting to Enable Distilled Feature Fields**  
+  [[Paper]](https://arxiv.org/abs/2312.03203)
+  [[Project-Page]](https://feature-3dgs.github.io/)
+  [[Code]](https://github.com/ShijieZhou-UCLA/feature-3dgs)
+
+- **Language Embedded 3D Gaussians for Open-Vocabulary Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2311.18482)
+  [[Project-Page]](https://buaavrcg.github.io/LEGaussians/)
+  [[Code]](https://github.com/buaavrcg/LEGaussians)
+
+- **SAGD: Boundary-Enhanced Segment Anything in 3D Gaussian via Gaussian Decomposition**  
+  [[Paper]](https://arxiv.org/abs/2401.17857)
+
+- **FMGS: Foundation Model Embedded 3D Gaussian Splatting for Holistic 3D Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2401.01970)
+  [[Project-Page]](https://xingxingzuo.github.io/fmgs/)
+  [[Code]](https://github.com/google-research/foundation-model-embedded-3dgs)
+
+- **EgoLifter: Open-world 3D Segmentation for Egocentric Perception**  
+  [[Paper]](https://arxiv.org/abs/2403.18118)
+  [[Project-Page]](https://egolifter.github.io/)
+  [[Code]](https://github.com/facebookresearch/egolifter)
+
+- **Semantic Gaussians: Open-Vocabulary Scene Understanding with 3D Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2403.15624)
+  [[Project-Page]](https://sharinka0715.github.io/semantic-gaussians/)
+  [[Code]](https://github.com/sharinka0715/semantic-gaussians)
+
+- **GOI: Find 3D Gaussians of Interest with an Optimizable Open-vocabulary Semantic-space Hyperplane**  
+  [[Paper]](https://arxiv.org/abs/2405.17596)
+  [[Project-Page]](https://quyans.github.io/GOI-Hyperplane/)
+  [[Code]](https://github.com/Quyans/GOI-Hyperplane)
+
+- **OpenGaussian: Towards Point-Level 3D Gaussian-based Open Vocabulary Understanding**  
+  [[Paper]](https://arxiv.org/abs/2406.02058)
+  [[Project-Page]](https://3d-aigc.github.io/OpenGaussian/)
+  [[Code]](https://github.com/yanmin-wu/OpenGaussian)
+
+- **3D Vision-Language Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2410.07577)
+
+- **SADG: Segment Any Dynamic Gaussian Without Object Trackers**  
+  [[Paper]](https://arxiv.org/abs/2411.19290)
+  [[Project-Page]](https://yunjinli.github.io/project-sadg/)
+  [[Code]](https://github.com/yunjinli/SADG-SegmentAnyDynamicGaussian)
+
+- **DCSEG: Decoupled 3D Open-Set Segmentation using Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2412.10972)
+
+- **SuperGSeg: Open-Vocabulary 3D Segmentation with Structured Super-Gaussians**  
+  [[Paper]](https://arxiv.org/abs/2412.10231)
+  [[Project-Page]](https://supergseg.github.io/)
+  [[Code]](https://github.com/supergseg/supergseg)
+
+- **GaussTR: Foundation Model-Aligned Gaussian Transformer for Self-Supervised 3D Spatial Understanding**  
+  [[Paper]](https://arxiv.org/abs/2412.13193)
+  [[Project-Page]](https://hustvl.github.io/GaussTR/)
+  [[Code]](https://github.com/hustvl/GaussTR)
+
+- **LangSurf: Language-Embedded Surface Gaussians for 3D Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2412.17635)
+  [[Project-Page]](https://langsurf.github.io/)
+  [[Code]](https://github.com/lifuguan/LangSurf)
+
+- **GSemSplat: Generalizable Semantic 3D Gaussian Splatting from Uncalibrated Image Pairs**  
+  [[Paper]](https://arxiv.org/abs/2412.16932)
+
+- **CLIP-GS: CLIP-Informed Gaussian Splatting for Real-time and View-consistent 3D Semantic Understanding**  
+  [[Paper]](https://arxiv.org/abs/2404.14249)
+  [[Project-Page]](https://gbliao.github.io/CLIP-GS.github.io/)
+  [[Code]](https://github.com/gbliao/CLIP-GS)
+
+- **SLGaussian: Fast Language Gaussian Splatting in Sparse Views**  
+  [[Paper]](https://arxiv.org/abs/2412.08331)
+  [[Project-Page]]()
+  [[Code]]()
+
+- **InstanceGaussian: Appearance-Semantic Joint Gaussian Representation for 3D Instance-Level Perception**  
+  [[Paper]](https://arxiv.org/abs/2411.19235)
+  [[Project-Page]](https://lhj-git.github.io/InstanceGaussian/)
+
+- **OVGaussian: Generalizable 3D Gaussian Segmentation with Open Vocabularies**  
+  [[Paper]](https://arxiv.org/abs/2501.00326)
+  [[Code]](https://github.com/runnanchen/OVGaussian)
+
+- **Lifting by Gaussians: A Simple, Fast and Flexible Method for 3D Instance Segmentation**  
+  [[Paper]](https://arxiv.org/abs/2502.00173)
+
+- **PanoGS: Gaussian-based Panoptic Segmentation for 3D Open Vocabulary Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2503.18107)
+  [[Project-Page]](https://zju3dv.github.io/panogs/)
+  [[Code]](https://github.com/zhaihongjia/PanoGS)
+
+- **SceneSplat: Gaussian Splatting-based Scene Understanding with Vision-Language Pretraining**  
+  [[Paper]](https://arxiv.org/abs/2503.18052)
+  [[Code]](https://github.com/unique1i/SceneSplat)
+
+- **M3: 3D-Spatial MultiModal Memory**  
+  [[Paper]](https://arxiv.org/abs/2503.16413)
+  [[Project-Page]](https://m3-spatial-memory.github.io/)
+  [[Code]](https://github.com/MaureenZOU/m3-spatial)
+
+- **EgoSplat: Open-Vocabulary Egocentric Scene Understanding with Language Embedded 3D Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2503.11345)
+
+- **Segment then Splat: A Unified Approach for 3D Open-Vocabulary Segmentation based on Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2503.22204)
+  [[Project-Page]](https://vulab-ai.github.io/Segment-then-Splat/)
+
+- **Rethinking End-to-End 2D to 3D Scene Segmentation in Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2503.14029)
+  [[Project-Page]]()
+  [[Code]](https://github.com/Runsong123/Unified-Lift)
+
+- **CAGS: Open-Vocabulary 3D Scene Understanding with Context-Aware Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2504.11893)
+
+- **NVSMask3D: Hard Visual Prompting with Camera Pose Interpolation for 3D Open Vocabulary Instance Segmentation**  
+  [[Paper]](https://arxiv.org/abs/2504.14638)
+
+- **Training-Free Hierarchical Scene Understanding for Gaussian Splatting with Superpoint Graphs**  
+  [[Paper]](https://arxiv.org/abs/2504.13153)
+  [[Code]](https://github.com/Atrovast/THGS)
+
+###### 3.1.2.4.3 Occupancy Prediction
+
+- **GaussianFormer: Scene as Gaussians for Vision-Based 3D Semantic Occupancy Prediction**  
+  [[Paper]](https://arxiv.org/abs/2405.17429)
+  [[Code]](https://github.com/huang-yh/GaussianFormer)
+
+- **GaussianFormer-2: Probabilistic Gaussian Superposition for Efficient 3D Occupancy Prediction**  
+  [[Paper]](https://arxiv.org/abs/2412.04384)
+  [[Code]](https://github.com/huang-yh/GaussianFormer)
+
+- **AutoOcc: Automatic Open-Ended Semantic Occupancy Annotation via Vision-Language Guided Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2502.04981)
+
+- **GSRender: Deduplicated Occupancy Prediction via Weakly Supervised 3D Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2412.14579)
+
+- **GaussianAD: Gaussian-Centric End-to-End Autonomous Driving**  
+  [[Paper]](https://arxiv.org/abs/2412.10371)
+  [[Code]](https://github.com/wzzheng/GaussianAD)
+
+- **EmbodiedOcc: Embodied 3D Occupancy Prediction for Vision-based Online Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2412.04380)
+  [[Project-Page]](https://ykiwu.github.io/EmbodiedOcc/)
+  [[Code]](https://github.com/YkiWu/EmbodiedOcc)
+
+- **GaussRender: Learning 3D Occupancy with Gaussian Rendering**  
+  [[Paper]](https://arxiv.org/abs/2502.05040)
+  [[Code]](https://github.com/valeoai/GaussRender)
+
+- **GaussianFlowOcc: Sparse and Weakly Supervised Occupancy Estimation using Gaussian Splatting and Temporal Flow**  
+  [[Paper]](https://arxiv.org/abs/2502.17288)
+  [[Code]](https://github.com/boschresearch/GaussianFlowOcc)
+
+###### 3.1.2.4.4 Scene Graph Generation
+
+- **DynamicGSG: Dynamic 3D Gaussian Scene Graphs for Environment Adaptation**  
+  [[Paper]](https://arxiv.org/abs/2502.15309)
+  [[Code]](https://github.com/GeLuzhou/Dynamic-GSG)
+
+- **GaussianGraph: 3D Gaussian-based Scene Graph Generation for Open-world Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2503.04034)
+  [[Project-Page]](https://wangxihan-bit.github.io/GaussianGraph/)
+  [[Code]](https://github.com/WangXihan-bit/GaussianGraph/)
+
+- **Intelligent Spatial Perception by Building Hierarchical 3D Scene Graphs for Indoor Scenarios with the Help of LLMs**  
+  [[Paper]](https://arxiv.org/abs/2503.15091)
+
+###### 3.1.2.4.5 Navigation
+
+- **GaussNav: Gaussian Splatting for Visual Navigation**  
+  [[Paper]](https://arxiv.org/abs/2403.11625)
+  [[Project-Page]](https://xiaohanlei.github.io/projects/GaussNav/)
+  [[Code]](https://github.com/XiaohanLei/GaussNav)
+
+- **UnitedVLN: Generalizable Gaussian Splatting for Continuous Vision-Language Navigation**  
+  [[Paper]](https://arxiv.org/abs/2411.16053)
+
+###### 3.1.2.4.6 SLAM
+
+- **WildGS-SLAM: Monocular Gaussian Splatting SLAM in Dynamic Environments**  
+  [[Paper]](https://arxiv.org/abs/2504.03886)
+  [[Project-Page]](https://wildgs-slam.github.io/)
+  [[Code]](https://github.com/GradientSpaces/WildGS-SLAM)
+
+##### 3.1.2.5 Gaussian Splatting based 3D Foundation Model
+
+- **Large Spatial Model: End-to-end Unposed Images to Semantic 3D**  
+  [[Paper]](https://arxiv.org/abs/2410.18956)
+  [[Project-Page]](https://largespatialmodel.github.io/)
+  [[Code]](https://github.com/NVlabs/LSM)
+
+- **GaussianPretrain: A Simple Unified 3D Gaussian Representation for Visual Pre-training in Autonomous Driving**  
+  [[Paper]](https://arxiv.org/abs/2411.12452)
+  [[Code]](https://github.com/Public-BOTs/GaussianPretrain)
+
+- **VisionPAD: A Vision-Centric Pre-training Paradigm for Autonomous Driving**  
+  [[Paper]](https://arxiv.org/abs/2411.14716)
+
 ### 3.2 Machine Learning
 
 - **Locate 3D: Real-World Object Localization via Self-Supervised Learning in 3D**  
@@ -707,9 +1535,17 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Code]](https://github.com/SpyrosMouselinos/GeometryAgents)
 
 - **Advancing Spatial Reasoning in Large Language Models: An In-Depth Evaluation and Enhancement Using the StepGame Benchmark**  
-  *provide a flawless solution to the benchmark by combining template-to-relation mapping with logic-based reasoning. *  
+  *provide a flawless solution to the benchmark by combining template-to-relation mapping with logic-based reasoning.*  
   [[Paper]](https://arxiv.org/abs/2401.03991)
   [[Code]](https://github.com/Fangjun-Li/SpatialLM-StepGame)
+
+- **Visual Spatial Reasoning**  
+  *Visual Spatial Reasoning (VSR), a dataset containing more than 10k natural text-image pairs with 66 types of spatial relations in English*  
+  [[Paper]](https://arxiv.org/abs/2205.00363)
+  [[Code]](https://github.com/cambridgeltl/visual-spatial-reasoning)
+
+- **SpatialLLM: A Compound 3D-Informed Design towards Spatially-Intelligent Large Multimodal Models**  
+  [[Paper]](https://arxiv.org/abs/2505.00788)
 
 #### 3.4.2 Recognition
 
