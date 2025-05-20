@@ -29,11 +29,12 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
     - [1.2.4 3D Reconstruction](#124-3d-reconstruction)
     - [1.2.5 Scene Generation](#125-scene-generation)
     - [1.2.6 Spatial Simulation](#126-spatial-simulation)
-    - [1.2.7 Point Distribution](#127-point-distribution)
+    - [1.2.7 Point Distribution/Tracking](#127-point-distributiontracking)
     - [1.2.8 Object Positioning](#128-object-positioning)
     - [1.2.9 Occupancy Prediction](#129-occupancy-prediction)
     - [1.2.10 Scene Completion](#1210-scene-completion)
     - [1.2.11 Segmentation](#1211-segmentation)
+    - [1.2.12 Pose Estimation](#1212-pose-estimation)
   - [1.3 Multi-modal](#13-multi-modal)
     - [1.3.1 Understanding](#131-understanding)
     - [1.3.2 Spatial Reasoning](#132-spatial-reasoning)
@@ -71,8 +72,21 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
         - [3.1.2.4.5 Navigation](#31245-navigation)
         - [3.1.2.4.6 SLAM](#31246-slam)
       - [3.1.2.5 Gaussian Splatting based 3D Foundation Model](#3125-gaussian-splatting-based-3d-foundation-model)
+    - [3.1.3 Geometry Method](#313-geometry-method)
+    - [3.1.4 Point Cloud](#314-point-cloud)
+      - [3.1.4.1 Survey](#3141-survey)
+      - [3.1.4.2 Base Model](#3142-base-model)
+      - [3.1.4.3 Usage](#3143-usage)
+        - [3.1.4.3.1 Multimodal Alignment](#31431-multimodal-alignment)
+        - [3.1.4.3.2 LLM](#31432-llm)
+      - [3.1.4.4 Downstream Tasks](#3144-downstream-tasks)
+        - [3.1.4.4.1 Detection](#31441-detection)
+        - [3.1.4.4.2 Segmentation](#31442-segmentation)
+        - [3.1.4.4.3 Occupancy Prediction](#31443-occupancy-prediction)
+        - [3.1.4.4.4 Visual Grounding](#31444-visual-grounding)
   - [3.2 Machine Learning](#32-machine-learning)
   - [3.3 deep learning](#33-deep-learning)
+    - [3.3.1 Geometry Based](#331-geometry-based)
   - [3.4 LLM](#34-llm)
     - [3.4.1 Spatial Reasoning](#341-spatial-reasoning)
     - [3.4.2 Recognition](#342-recognition)
@@ -357,6 +371,11 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Paper]](https://arxiv.org/abs/2307.10984)
   [[Code]](https://github.com/YvanYin/Metric3D)
 
+- **MVSAnywhere: Zero-Shot Multi-View Stereo**  
+  [[Paper]](https://arxiv.org/abs/2503.22430)
+  [[Project-Page]](https://nianticlabs.github.io/mvsanywhere/)
+  [[Code]](https://github.com/nianticlabs/mvsanywhere)
+
 #### 1.2.4 3D Reconstruction
 
 - **Light3R-SfM: Towards Feed-forward Structure-from-Motion**  
@@ -392,6 +411,33 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Paper]](https://arxiv.org/abs/2312.14132)
   [[Project-Page]](https://dust3r.europe.naverlabs.com/)
   [[Code]](https://github.com/naver/dust3r)
+
+- **Triplane Meets Gaussian Splatting: Fast and Generalizable Single-View 3D Reconstruction with Transformers**  
+  [[Paper]](https://arxiv.org/abs/2312.09147)
+  [[Project-Page]](https://zouzx.github.io/TriplaneGaussian/)
+  [[Code]](https://github.com/VAST-AI-Research/TriplaneGaussian)
+
+- **UniK3D: Universal Camera Monocular 3D Estimation**  
+  [[Paper]](https://arxiv.org/abs/2503.16591)
+  [[Project-Page]](https://lpiccinelli-eth.github.io/pub/unik3d/)
+  [[Code]](https://github.com/lpiccinelli-eth/unik3d) 
+
+- **Visual Geometry Grounded Deep Structure From Motion**  
+  [[Paper]](https://arxiv.org/abs/2312.04563)
+  [[Project-Page]](https://vggsfm.github.io/)
+  [[Code]](https://github.com/facebookresearch/vggsfm)
+
+- **Can Video Diffusion Model Reconstruct 4D Geometry?**  
+  [[Paper]](https://arxiv.org/abs/2503.21082)
+  [[Project-Page]](https://wayne-mai.github.io/publication/sora3r_arxiv_2025/)
+
+- **St4RTrack: Simultaneous 4D Reconstruction and Tracking in the World**  
+  [[Paper]](https://arxiv.org/abs/2504.13152)
+  [[Project-Page]](https://st4rtrack.github.io/)
+
+- **POMATO: Marrying Pointmap Matching with Temporal Motion for Dynamic 3D Reconstruction**  
+  [[Paper]](https://arxiv.org/abs/2504.05692)
+  [[Code]](https://github.com/wyddmw/POMATO)
 
 #### 1.2.5 Scene Generation
 
@@ -431,7 +477,20 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://robocasa.ai/)
   [[Code]](https://github.com/robocasa/robocasa)
 
-#### 1.2.7 Point Distribution
+#### 1.2.7 Point Distribution/Tracking
+
+- **3D Shape Tokenization via Latent Flow Matching**  
+  [[Paper]](https://arxiv.org/abs/2412.15618)
+  [[Project-Page]](https://machinelearning.apple.com/research/3d-shape-tokenization)
+
+- **Voint Cloud: Multi-View Point Cloud Representation for 3D Understanding**  
+  [[Paper]](https://arxiv.org/abs/2111.15363)
+  [[Code]](https://github.com/ajhamdi/vointcloud)
+
+- **TAPIP3D: Tracking Any Point in Persistent 3D Geometry**  
+  [[Paper]](https://arxiv.org/abs/2504.14717)
+  [[Project-Page]](https://tapip3d.github.io/)
+  [[Code]](https://github.com/zbw001/TAPIP3D)
 
 #### 1.2.8 Object Positioning
 
@@ -536,6 +595,27 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Paper]](https://arxiv.org/abs/2503.01309)
   [[Project]](https://yjtang249.github.io/OnlineAnySeg/)
   [[Code]](https://github.com/yjtang249/OnlineAnySeg)
+
+#### 1.2.12 Pose Estimation
+
+- **PoseDiffusion: Solving Pose Estimation via Diffusion-aided Bundle Adjustment**  
+  [[Paper]](https://arxiv.org/abs/2306.15667)
+  [[Project-Page]](https://posediffusion.github.io/)
+  [[Code]](https://github.com/facebookresearch/PoseDiffusion)
+
+- **RelPose++: Recovering 6D Poses from Sparse-view Observations**  
+  [[Paper]](https://arxiv.org/abs/2305.04926)
+  [[Project-Page]](https://amyxlase.github.io/relpose-plus-plus/)
+  [[Code]](https://github.com/amyxlase/relpose-plus-plus)
+
+- **Visual Geometry Grounded Deep Structure From Motion**  
+  [[Paper]](https://arxiv.org/abs/2312.04563)
+  [[Project-Page]](https://vggsfm.github.io/)
+  [[Code]](https://github.com/facebookresearch/vggsfm)
+
+- **Relative Pose Estimation through Affine Corrections of Monocular Depth Priors**  
+  [[Paper]](https://arxiv.org/abs/2501.05446)
+  [[Code]](https://github.com/MarkYu98/madpose)
 
 ### 1.3 Multi-modal
 
@@ -1442,6 +1522,313 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 - **VisionPAD: A Vision-Centric Pre-training Paradigm for Autonomous Driving**  
   [[Paper]](https://arxiv.org/abs/2411.14716)
 
+#### 3.1.3 Geometry Method
+
+- **TetSphere Splatting: Representing High-Quality Geometry with Lagrangian Volumetric Meshes**  
+  [[Paper]](https://arxiv.org/abs/2405.20283)
+  [[Code]](https://github.com/gmh14/tssplat)
+
+- **PoseDiffusion: Solving Pose Estimation via Diffusion-aided Bundle Adjustment**  
+  [[Paper]](https://arxiv.org/abs/2306.15667)
+  [[Project-Page]](https://posediffusion.github.io/)
+  [[Code]](https://github.com/facebookresearch/PoseDiffusion)
+
+- **RelPose++: Recovering 6D Poses from Sparse-view Observations**  
+  [[Paper]](https://arxiv.org/abs/2305.04926)
+  [[Project-Page]](https://amyxlase.github.io/relpose-plus-plus/)
+  [[Code]](https://github.com/amyxlase/relpose-plus-plus)
+
+- **Visual Geometry Grounded Deep Structure From Motion**  
+  [[Paper]](https://arxiv.org/abs/2312.04563)
+  [[Project-Page]](https://vggsfm.github.io/)
+  [[Code]](https://github.com/facebookresearch/vggsfm)
+
+- **MoGe: Unlocking Accurate Monocular Geometry Estimation for Open-Domain Images with Optimal Training Supervision**  
+  [[Paper]](https://arxiv.org/abs/2410.19115)
+  [[Project-Page]](https://wangrc.site/MoGePage/)
+  [[Code]](https://github.com/microsoft/moge)
+
+- **LoRA3D: Low-Rank Self-Calibration of 3D Geometric Foundation Models**  
+  [[Paper]](https://arxiv.org/abs/2412.07746)
+
+- **Relative Pose Estimation through Affine Corrections of Monocular Depth Priors**  
+  [[Paper]](https://arxiv.org/abs/2501.05446)
+  [[Code]](https://github.com/MarkYu98/madpose)
+
+- **Uni4D: Unifying Visual Foundation Models for 4D Modeling from a Single Video**  
+  [[Paper]](https://arxiv.org/abs/2503.21761)
+  [[Project-Page]](https://davidyao99.github.io/uni4d/)
+  [[Code]](https://github.com/Davidyao99/uni4d/tree/main)
+
+- **Can Video Diffusion Model Reconstruct 4D Geometry?**  
+  [[Paper]](https://arxiv.org/abs/2503.21082)
+  [[Project-Page]](https://wayne-mai.github.io/publication/sora3r_arxiv_2025/)
+
+#### 3.1.4 Point Cloud
+
+##### 3.1.4.1 Survey
+
+- **Advances in 3D pre-training and downstream tasks: a survey**  
+  [[Paper]](https://link.springer.com/article/10.1007/s44336-024-00007-4)
+
+##### 3.1.4.2 Base Model
+
+- **PointNeXt: Revisiting PointNet++ with Improved Training and Scaling Strategies**  
+  [[Paper]](https://arxiv.org/abs/2206.04670)
+  [[Code]](https://github.com/guochengqian/pointnext)
+
+- **Masked Autoencoders for Point Cloud Self-supervised Learning**  
+  [[Paper]](https://arxiv.org/abs/2203.06604)
+  [[Code]](https://github.com/Pang-Yatian/Point-MAE)
+
+- **Swin3D: A Pretrained Transformer Backbone for 3D Indoor Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2304.06906)
+  [[Project-Page]](https://yukichiii.github.io/project/swin3D/swin3D.html)
+  [[Code]](https://github.com/microsoft/Swin3D)
+
+- **Point Transformer V3: Simpler, Faster, Stronger**  
+  [[Paper]](https://arxiv.org/abs/2312.10035)
+  [[Code]](https://github.com/Pointcept/PointTransformerV3)
+
+- **ShapeSplat: A Large-scale Dataset of Gaussian Splats and Their Self-Supervised Pretraining**  
+  [[Paper]](https://arxiv.org/abs/2408.10906)
+  [[Project-Page]](https://unique1i.github.io/ShapeSplat/)
+  [[Code]](https://github.com/qimaqi/ShapeSplat-Gaussian_MAE)
+
+- **MAP: Unleashing Hybrid Mamba-Transformer Vision Backbone's Potential with Masked Autoregressive Pretraining**  
+  [[Paper]](https://arxiv.org/abs/2410.00871)
+  [[Code]](https://github.com/yunzeliu/MAP)
+
+- **Point Cloud Understanding via Attention-Driven Contrastive Learning**  
+  [[Paper]](https://arxiv.org/abs/2411.14744)
+
+- **Point Cloud Unsupervised Pre-training via 3D Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2411.18667)
+
+- **Masked Scene Modeling: Narrowing the Gap Between Supervised and Self-Supervised Learning in 3D Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2504.06719)
+  [[Project-Page]](https://phermosilla.github.io/msm/)
+  [[Code]](https://github.com/phermosilla/msm)
+
+##### 3.1.4.3 Usage
+
+###### 3.1.4.3.1 Multimodal Alignment
+
+- ****  
+  [[Paper]]()
+  [[Project-Page]]()
+  [[Code]]()
+
+- ****  
+  [[Paper]]()
+  [[Project-Page]]()
+  [[Code]]()
+
+###### 3.1.4.3.2 LLM
+
+- **3D-LLM: Injecting the 3D World into Large Language Models**  
+  [[Paper]](https://arxiv.org/abs/2307.12981)
+  [[Code]](https://github.com/UMass-Embodied-AGI/3D-LLM)
+
+- **SceneVerse: Scaling 3D Vision-Language Learning for Grounded Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2401.09340)
+  [[Project-Page]](https://scene-verse.github.io/)
+  [[Code]](https://github.com/scene-verse/sceneverse)
+
+- **ShapeLLM: Universal 3D Object Understanding for Embodied Interaction**  
+  [[Paper]](https://arxiv.org/abs/2402.17766)
+  [[Project-Page]](https://qizekun.github.io/shapellm/)
+  [[Code]](https://github.com/qizekun/ShapeLLM)
+
+- **Any2Point: Empowering Any-modality Large Models for Efficient 3D Understanding**  
+  [[Paper]](https://arxiv.org/abs/2404.07989)
+  [[Code]](https://github.com/Ivan-Tang-3D/Any2Point)
+
+- **MiniGPT-3D: Efficiently Aligning 3D Point Clouds with Large Language Models using 2D Priors**  
+  [[Paper]](https://arxiv.org/abs/2405.01413)
+  [[Project-Page]](https://tangyuan96.github.io/minigpt_3d_project_page/)
+  [[Code]](https://github.com/TangYuan96/MiniGPT-3D)
+
+- **LLaVA-3D: A Simple yet Effective Pathway to Empowering LMMs with 3D-awareness**  
+  [[Paper]](https://arxiv.org/abs/2409.18125)
+  [[Project-Page]](https://zcmax.github.io/projects/LLaVA-3D/)
+  [[Code]](https://github.com/ZCMax/LLaVA-3D)
+
+- **3DGraphLLM: Combining Semantic Graphs and Large Language Models for 3D Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2412.18450)
+  [[Code]](https://github.com/CognitiveAISystems/3DGraphLLM)
+
+- **Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution**  
+  [[Paper]](https://arxiv.org/abs/2409.12961)
+  [[Project-Page]](https://oryx-mllm.github.io/)
+  [[Code]](https://github.com/Oryx-mllm/Oryx)
+
+##### 3.1.4.4 Downstream Tasks
+
+###### 3.1.4.4.1 Detection
+
+- **Unifying Voxel-based Representation with Transformer for 3D Object Detection**  
+  [[Paper]](https://arxiv.org/abs/2206.00630)
+  [[Code]](https://github.com/dvlab-research/UVTR)
+
+- **Uni3DETR: Unified 3D Detection Transformer**  
+  [[Paper]](https://arxiv.org/abs/2310.05699)
+  [[Code]](https://github.com/zhenyuw16/Uni3DETR)
+
+- **UniDet3D: Multi-dataset Indoor 3D Object Detection**  
+  [[Paper]](https://arxiv.org/abs/2409.04234)
+  [[Code]](https://github.com/filapro/unidet3d)
+
+- **Cocoon: Robust Multi-Modal Perception with Uncertainty-Aware Sensor Fusion**  
+  [[Paper]](https://arxiv.org/abs/2410.12592)
+
+###### 3.1.4.4.2 Segmentation
+
+- **ConceptFusion: Open-set Multimodal 3D Mapping**  
+  [[Paper]](https://arxiv.org/abs/2302.07241)
+  [[Project-Page]](https://concept-fusion.github.io/)
+  [[Code]](https://github.com/concept-fusion/concept-fusion)
+
+- **OpenScene: 3D Scene Understanding with Open Vocabularies**  
+  [[Paper]](https://arxiv.org/abs/2211.15654)
+  [[Project-Page]](https://pengsongyou.github.io/openscene)
+  [[Code]](https://github.com/pengsongyou/openscene)
+
+- **CLIP2Scene: Towards Label-efficient 3D Scene Understanding by CLIP**  
+  [[Paper]](https://arxiv.org/abs/2301.04926)
+  [[Code]](https://github.com/runnanchen/CLIP2Scene)
+
+- **Language-Assisted 3D Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2312.11451)
+
+- **OneFormer3D: One Transformer for Unified Point Cloud Segmentation**  
+  [[Paper]](https://arxiv.org/abs/2311.14405)
+
+- **Open3DIS: Open-Vocabulary 3D Instance Segmentation with 2D Mask Guidance**  
+  [[Paper]](https://arxiv.org/abs/2312.10671)
+  [[Project-Page]](https://open3dis.github.io/)
+  [[Code]](https://github.com/VinAIResearch/Open3DIS)
+
+- **MaskClustering: View Consensus based Mask Graph Clustering for Open-Vocabulary 3D Instance Segmentation**  
+  [[Paper]](https://arxiv.org/abs/2401.07745)
+  [[Project-Page]](https://pku-epic.github.io/MaskClustering/)
+  [[Code]](https://github.com/PKU-EPIC/MaskClustering)
+
+- **SAI3D: Segment Any Instance in 3D Scenes**  
+  [[Paper]](https://arxiv.org/abs/2312.11557)
+  [[Project-Page]](https://yd-yin.github.io/SAI3D/)
+  [[Code]](https://github.com/yd-yin/SAI3D)
+
+- **OpenMask3D: Open-Vocabulary 3D Instance Segmentation**  
+  [[Paper]](https://arxiv.org/abs/2306.13631)
+  [[Project-Page]](https://openmask3d.github.io/)
+  [[Code]](https://github.com/OpenMask3D/openmask3d)
+
+- **Towards Label-free Scene Understanding by Vision Foundation Models**  
+  [[Paper]](https://arxiv.org/abs/2306.03899)
+  [[Code]](https://github.com/runnanchen/Label-Free-Scene-Understanding)
+
+- **SAM3D: Segment Anything in 3D Scenes**  
+  [[Paper]](https://arxiv.org/abs/2306.03908)
+  [[Code]](https://github.com/Pointcept/SegmentAnything3D)
+
+- **A Unified Framework for 3D Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2407.03263)
+  [[Project-Page]](https://dk-liang.github.io/UniSeg3D/)
+  [[Code]](https://github.com/dk-liang/UniSeg3D)
+
+- **OpenIns3D: Snap and Lookup for 3D Open-vocabulary Instance Segmentation**  
+  [[Paper]](https://arxiv.org/abs/2309.00616)
+  [[Project-Page]](https://zheninghuang.github.io/OpenIns3D/)
+  [[Code]](https://github.com/Pointcept/OpenIns3D)
+
+- **SAM-Guided Masked Token Prediction for 3D Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2410.12158)
+
+- **Open-Vocabulary SAM3D: Towards Training-free Open-Vocabulary 3D Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2405.15580)
+  [[Project-Page]](https://hithqd.github.io/projects/OV-SAM3D/)
+  [[Code]](https://github.com/HanchenTai/OV-SAM3D)
+
+- **SAM2Point: Segment Any 3D as Videos in Zero-shot and Promptable Manners**  
+  [[Paper]](https://arxiv.org/abs/2408.16768)
+  [[Project-Page]](https://sam2point.github.io/)
+  [[Code]](https://github.com/ZiyuGuo99/SAM2Point)
+
+- **GrabS: Generative Embodied Agent for 3D Object Segmentation without Scene Supervision**  
+  [[Paper]](https://arxiv.org/abs/2504.11754)
+  [[Code]](https://github.com/vLAR-group/GrabS)
+
+- **Multimodality Helps Few-shot 3D Point Cloud Semantic Segmentation**  
+  [[Paper]](https://arxiv.org/abs/2410.22489)
+  [[Code]](https://github.com/ZhaochongAn/Multimodality-3D-Few-Shot)
+
+- **UniPLV: Towards Label-Efficient Open-World 3D Scene Understanding by Regional Visual Language Supervision**  
+  [[Paper]](https://arxiv.org/abs/2412.18131)
+
+- **Cross-Modal and Uncertainty-Aware Agglomeration for Open-Vocabulary 3D Scene Understanding**  
+  [[Paper]](https://arxiv.org/abs/2503.16707)
+  [[Project-Page]](https://tyroneli.github.io/CUA_O3D/)
+  [[Code]](https://github.com/TyroneLi/CUA_O3D)
+
+- **Pre-training with 3D Synthetic Data: Learning 3D Point Cloud Instance Segmentation from 3D Synthetic Scenes**  
+  [[Paper]](https://arxiv.org/abs/2503.24229)
+
+- **DINO in the Room: Leveraging 2D Foundation Models for 3D Segmentation**  
+  [[Paper]](https://arxiv.org/abs/2503.18944)
+  [[Project-Page]](https://vision.rwth-aachen.de/DITR)
+  [[Code]](https://github.com/VisualComputingInstitute/DITR)
+
+###### 3.1.4.4.3 Occupancy Prediction
+
+- **EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI**  
+  [[Paper]](https://arxiv.org/abs/2312.16170)
+  [[Project-Page]](https://tai-wang.github.io/embodiedscan/)
+  [[Code]](https://github.com/OpenRobotLab/EmbodiedScan)
+
+- **ZOPP: A Framework of Zero-shot Offboard Panoptic Perception for Autonomous Driving**  
+  [[Paper]](https://arxiv.org/abs/2411.05311)
+  [[Code]](https://github.com/PJLab-ADG/ZOPP)
+
+- **OccMamba: Semantic Occupancy Prediction with State Space Models**  
+  [[Paper]](https://arxiv.org/abs/2408.09859)
+  [[Code]](https://github.com/USTCLH/OccMamba)
+
+###### 3.1.4.4.4 Visual Grounding
+
+- **OVIR-3D: Open-Vocabulary 3D Instance Retrieval Without Training on 3D Data**  
+  [[Paper]](https://arxiv.org/abs/2311.02873)
+  [[Code]](https://github.com/shiyoung77/OVIR-3D)
+
+- **Task-oriented Sequential Grounding and Navigation in 3D Scenes**  
+  [[Paper]](https://arxiv.org/abs/2408.04034)
+  [[Project-Page]](https://sg-3d.github.io/)
+
+- **SeeGround: See and Ground for Zero-Shot Open-Vocabulary 3D Visual Grounding**  
+  [[Paper]](https://arxiv.org/abs/2412.04383)
+  [[Project-Page]](https://seeground.github.io/)
+  [[Code]](https://github.com/iris0329/SeeGround)
+
+- **AugRefer: Advancing 3D Visual Grounding via Cross-Modal Augmentation and Spatial Relation-based Referring**  
+  [[Paper]](https://arxiv.org/abs/2501.09428)
+
+- **TSP3D: Text-guided Sparse Voxel Pruning for Efficient 3D Visual Grounding**  
+  [[Paper]](https://arxiv.org/abs/2502.10392)
+  [[Code]](https://github.com/GWxuan/TSP3D)
+
+- **Unifying 2D and 3D Vision-Language Understanding**  
+  [[Paper]](https://arxiv.org/abs/2503.10745)
+  [[Project-Page]](https://univlg.github.io/)
+  [[Code]](https://github.com/facebookresearch/univlg)
+
+- **Intent3D: 3D Object Detection in RGB-D Scans Based on Human Intention**  
+  [[Paper]](https://arxiv.org/abs/2405.18295)
+  [[Project-Page]](https://weitaikang.github.io/Intent3D-webpage/)
+  [[Code]](https://github.com/WeitaiKang/Intent3D)
+
+- **MLLM-For3D: Adapting Multimodal Large Language Model for 3D Reasoning Segmentation**  
+  [[Paper]](https://arxiv.org/abs/2503.18135)
+
 ### 3.2 Machine Learning
 
 - **Locate 3D: Real-World Object Localization via Self-Supervised Learning in 3D**  
@@ -1467,6 +1854,45 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   *a 3D-aware VQA model that marries two powerful ideas: probabilistic neural symbolic program execution for reasoning and deep neural networks with 3D generative representations of objects for robust visual recognition.*  
   [[Paper]](https://arxiv.org/abs/2310.17914)
   [[Code]](https://github.com/XingruiWang/3D-Aware-VQA)
+
+- **Pow3R: Empowering Unconstrained 3D Reconstruction with Camera and Scene Priors**  
+  [[Paper]](https://arxiv.org/abs/2503.17316)
+  [[Project-Page]](https://europe.naverlabs.com/research/publications/pow3r-empowering-unconstrained-3d-reconstruction-with-camera-and-scene-priors/)
+
+- **Easi3R: Estimating Disentangled Motion from DUSt3R Without Training**  
+  [[Paper]](https://arxiv.org/abs/2503.24391)
+  [[Project-Page]](https://easi3r.github.io/)
+  [[Code]](https://github.com/Inception3D/Easi3R) 
+
+- **Regist3R: Incremental Registration with Stereo Foundation Model**  
+  [[Paper]](https://arxiv.org/abs/2504.12356)
+
+- **POMATO: Marrying Pointmap Matching with Temporal Motion for Dynamic 3D Reconstruction**  
+  [[Paper]](https://arxiv.org/abs/2504.05692)
+  [[Code]](https://github.com/wyddmw/POMATO)
+
+#### 3.3.1 Geometry Based
+
+- **MVSAnywhere: Zero-Shot Multi-View Stereo**  
+  [[Paper]](https://arxiv.org/abs/2503.22430)
+  [[Project-Page]](https://nianticlabs.github.io/mvsanywhere/)
+  [[Code]](https://github.com/nianticlabs/mvsanywhere)
+
+- **VGGT: Visual Geometry Grounded Transformer**  
+  [[Paper]](https://arxiv.org/abs/2503.11651)
+  [[Code]](https://github.com/facebookresearch/vggt)
+
+- **UniK3D: Universal Camera Monocular 3D Estimation**  
+  [[Paper]](https://arxiv.org/abs/2503.16591)
+  [[Project-Page]](https://lpiccinelli-eth.github.io/pub/unik3d/)
+  [[Code]](https://github.com/lpiccinelli-eth/unik3d)  
+
+- **St4RTrack: Simultaneous 4D Reconstruction and Tracking in the World**  
+  [[Paper]](https://arxiv.org/abs/2504.13152)
+  [[Project-Page]](https://st4rtrack.github.io/)
+
+- **Mono3R: Exploiting Monocular Cues for Geometric 3D Reconstruction**  
+  [[Paper]](https://arxiv.org/abs/2504.13419)
 
 ### 3.4 LLM
 
