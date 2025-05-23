@@ -27,7 +27,10 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
     - [1.2.2 Detection](#122-detection)
     - [1.2.3 Depth Estimation](#123-depth-estimation)
     - [1.2.4 3D Reconstruction](#124-3d-reconstruction)
-    - [1.2.5 Scene Generation](#125-scene-generation)
+    - [1.2.5 Generation](#125-generation)
+      - [1.2.5.1 Survey](#1251-survey)
+      - [1.2.5.2 3D Generation](#1252-3d-generation)
+      - [1.2.5.3 Spatial Audio](#1253-spatial-audio)
     - [1.2.6 Spatial Simulation](#126-spatial-simulation)
     - [1.2.7 Point Distribution/Tracking](#127-point-distributiontracking)
     - [1.2.8 Object Positioning](#128-object-positioning)
@@ -376,6 +379,24 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Project-Page]](https://nianticlabs.github.io/mvsanywhere/)
   [[Code]](https://github.com/nianticlabs/mvsanywhere)
 
+- **Repurposing Diffusion-Based Image Generators for Monocular Depth Estimationq**  
+  [[Paper]](https://arxiv.org/abs/2312.02145)
+  [[Project-Page]](https://marigoldmonodepth.github.io/)
+  [[Code]](https://github.com/prs-eth/marigold)
+
+- **DepthART: Monocular Depth Estimation as Autoregressive Refinement Task**  
+  [[Paper]](https://arxiv.org/abs/2409.15010)
+  [[Project-Page]](https://bulatko.github.io/depthart-pp/)
+  [[Code]](https://github.com/bulatko/DepthART)
+
+- **PriorDiffusion: Leverage Language Prior in Diffusion Models for Monocular Depth Estimation**  
+  [[Paper]](https://arxiv.org/abs/2411.16750)
+
+- ****  
+  [[Paper]]()
+  [[Project-Page]]()
+  [[Code]]()
+
 #### 1.2.4 3D Reconstruction
 
 - **Light3R-SfM: Towards Feed-forward Structure-from-Motion**  
@@ -439,7 +460,18 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Paper]](https://arxiv.org/abs/2504.05692)
   [[Code]](https://github.com/wyddmw/POMATO)
 
-#### 1.2.5 Scene Generation
+#### 1.2.5 Generation
+
+##### 1.2.5.1 Survey
+
+- **Advances in 4D Generation: A Survey**  
+  [[Paper]](https://arxiv.org/abs/2503.14501)
+  [[Code]](https://github.com/MiaoQiaowei/Awesome-4D)
+
+- **Recent Advance in 3D Object and Scene Generation: A Survey**  
+  [[Paper]](https://arxiv.org/abs/2504.11734)
+
+##### 1.2.5.2 3D Generation
 
 - **SceneCraft: Layout-Guided 3D Scene Generation**  
   *SceneCraft, a novel method for generating detailed indoor scenes that adhere to textual descriptions and spatial layout preferences provided by users.*  
@@ -457,6 +489,37 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   [[Paper]](https://arxiv.org/abs/2312.09067)
   [[Project-Page]](https://yueyang1996.github.io/holodeck/)
   [[Code]](https://github.com/allenai/Holodeck)
+
+- **LRM: Large Reconstruction Model for Single Image to 3D**  
+  [[Paper]](https://arxiv.org/abs/2311.04400)
+  [[Project-Page]](https://yiconghong.me/LRM/)
+
+- **Zero-1-to-G: Taming Pretrained 2D Diffusion Model for Direct 3D Generation**  
+  [[Paper]](https://arxiv.org/abs/2501.05427)
+  [[Project-Page]](https://mengxuyigit.github.io/projects/zero-1-to-G/)
+
+- **Bolt3D: Generating 3D Scenes in Seconds**  
+  [[Paper]](https://arxiv.org/abs/2503.14445)
+  [[Project-Page]](https://szymanowiczs.github.io/bolt3d)
+
+- **VideoScene: Distilling Video Diffusion Model to Generate 3D Scenes in One Step**  
+  [[Paper]](https://arxiv.org/abs/2504.01956)
+  [[Project-Page]](https://hanyang-21.github.io/VideoScene/)
+  [[Code]](https://github.com/hanyang-21/VideoScene)
+
+- **GaussVideoDreamer: 3D Scene Generation with Video Diffusion and Inconsistency-Aware Gaussian Splatting**  
+  [[Paper]](https://arxiv.org/abs/2504.10001)
+
+- **HiScene: Creating Hierarchical 3D Scenes with Isometric View Generation**  
+  [[Paper]](https://arxiv.org/abs/2504.13072)
+  [[Project-Page]](https://zju3dv.github.io/hiscene/)
+
+##### 1.2.5.3 Spatial Audio
+
+- **OmniAudio: Generating Spatial Audio from 360-Degree Video**  
+  [[Paper]](https://arxiv.org/abs/2504.14906)
+  [[Project-Page]](https://omniaudio-360v2sa.github.io/)
+  [[Code]](https://github.com/liuhuadai/OmniAudio)
 
 #### 1.2.6 Spatial Simulation
 
@@ -705,26 +768,6 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 - **MapNav: A Novel Memory Representation via Annotated Semantic Maps for VLM-based Vision-and-Language Navigation**  
   [[Paper]](https://arxiv.org/abs/2502.13451)
-
-- ****  
-  [[Paper]]()
-  [[Project-Page]]()
-  [[Code]]()
-
-- ****  
-  [[Paper]]()
-  [[Project-Page]]()
-  [[Code]]()
-
-- ****  
-  [[Paper]]()
-  [[Project-Page]]()
-  [[Code]]()
-
-- ****  
-  [[Paper]]()
-  [[Project-Page]]()
-  [[Code]]()
 
 ### 1.4 Others (radar/GPS etc.)
 
@@ -1614,16 +1657,6 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 ###### 3.1.4.3.1 Multimodal Alignment
 
-- ****  
-  [[Paper]]()
-  [[Project-Page]]()
-  [[Code]]()
-
-- ****  
-  [[Paper]]()
-  [[Project-Page]]()
-  [[Code]]()
-
 ###### 3.1.4.3.2 LLM
 
 - **3D-LLM: Injecting the 3D World into Large Language Models**  
@@ -2094,6 +2127,22 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
 
 #### 4.6.1 World Model
 
+- **Exploring the Evolution of Physics Cognition in Video Generation: A Survey**  
+  [[Paper]](https://arxiv.org/abs/2503.21765)
+  [[Project-Page]](https://github.com/minnie-lin/Awesome-Physics-Cognition-based-Video-Generation)
+
+- **A Survey of World Models for Autonomous Driving**  
+  [[Paper]](https://arxiv.org/abs/2501.11260)
+
+- **The Role of World Models in Shaping Autonomous Driving: A Comprehensive Survey**  
+  [[Paper]](https://arxiv.org/abs/2502.10498)
+  [[Project-Page]](https://github.com/LMD0311/Awesome-World-Model)
+
+- **WonderWorld: Interactive 3D Scene Generation from a Single Image**  
+  [[Paper]](https://arxiv.org/abs/2406.09394)
+  [[Project-Page]](https://kovenyu.com/wonderworld/)
+  [[Code]](https://github.com/KovenYu/WonderWorld)
+
 - **Improving Transformer World Models for Data-Efficient RL**  
   *an approach to model-based RL that achieves a new state of the art performance on the challenging Craftax-classic benchmark, an open-world 2D survival game that requires agents to exhibit a wide range of general abilities*  
   [[Paper]](https://arxiv.org/abs/2502.01591)
@@ -2103,6 +2152,51 @@ Any suggestion is welcome, please feel free to raise an issue. ^_^
   *propose 3D-VLA by introducing a new family of embodied foundation models that seamlessly link 3D perception, reasoning, and action through a generative world model.*  
   [[Paper]](https://arxiv.org/abs/2403.09631)
   [[Project-Page]](https://vis-www.cs.umass.edu/3dvla/)
+
+- **DrivingGPT: Unifying Driving World Modeling and Planning with Multi-modal Autoregressive Transformers**  
+  [[Paper]](https://arxiv.org/abs/2412.18607)
+  [[Project-Page]](https://rogerchern.github.io/DrivingGPT/)
+
+- **GaussianWorld: Gaussian World Model for Streaming 3D Occupancy Prediction**  
+  [[Paper]](https://arxiv.org/abs/2412.10373)
+  [[Code]](https://github.com/zuosc19/GaussianWorld)
+
+- **Cosmos World Foundation Model Platform for Physical AI**  
+  [[Paper]](https://arxiv.org/abs/2501.03575)
+  [[Project-Page]](https://www.nvidia.com/en-us/ai/cosmos/)
+  [[Code]](https://github.com/nvidia-cosmos/cosmos-predict1)
+
+- **HERMES: A Unified Self-Driving World Model for Simultaneous 3D Scene Understanding and Generation**  
+  [[Paper]](https://arxiv.org/abs/2501.14729)
+  [[Project-Page]](https://lmd0311.github.io/HERMES/)
+  [[Code]](https://github.com/LMD0311/HERMES)
+
+- **MaskGWM: A Generalizable Driving World Model with Video Mask Reconstruction**  
+  [[Paper]](https://arxiv.org/abs/2502.11663)
+  [[Code]](https://github.com/SenseTime-FVG/OpenDWM)
+
+- **Seeing the Future, Perceiving the Future: A Unified Driving World Model for Future Generation and Perception**  
+  [[Paper]](https://arxiv.org/abs/2503.13587)
+  [[Project-Page]](https://dk-liang.github.io/UniFuture/)
+  [[Code]](https://github.com/dk-liang/UniFuture)
+
+- **World Modeling Makes a Better Planner: Dual Preference Optimization for Embodied Task Planning**  
+  [[Paper]](https://arxiv.org/abs/2503.10480)
+
+- **Generating Multimodal Driving Scenes via Next-Scene Prediction**  
+  [[Paper]](https://arxiv.org/abs/2503.14945)
+  [[Project-Page]](https://yanhaowu.github.io/UMGen/)
+  [[Code]](https://github.com/YanhaoWu/UMGen/)
+
+- **Cosmos-Transfer1: Conditional World Generation with Adaptive Multimodal Control**  
+  [[Paper]](https://arxiv.org/abs/2503.14492)
+  [[Project-Page]](https://www.nvidia.com/en-us/ai/cosmos/)
+  [[Code]](https://github.com/nvidia-cosmos/cosmos-transfer1)
+
+- **Aether: Geometric-Aware Unified World Modeling**  
+  [[Paper]](https://arxiv.org/abs/2503.18945)
+  [[Project-Page]](https://aether-world.github.io/)
+  [[Code]](https://github.com/OpenRobotLab/Aether)
 
 #### 4.6.2 Others
 
