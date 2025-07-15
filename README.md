@@ -112,6 +112,26 @@ The repository is continuously being developed and expanded. Any suggestion is w
 
 ### 3.10 Spatial Reasoning
 
+<details>
+  <summary>Awesome Repositories</summary>
+
+- [Awesome-Spatial-Reasoning](https://github.com/yyyybq/Awesome-Spatial-Reasoning)  ![GitHub stars](https://img.shields.io/github/stars/yyyybq/Awesome-Spatial-Reasoning?style=social)
+
+- [Awesome-spatial-visual-reasoning-MLLMs](https://github.com/vaew/Awesome-spatial-visual-reasoning-MLLMs)  ![GitHub stars](https://img.shields.io/github/stars/vaew/Awesome-spatial-visual-reasoning-MLLMs?style=social)
+
+- [Awesome-Visual-Spatial-Reasoning](https://github.com/prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning)![GitHub stars](https://img.shields.io/github/stars/prism-visual-spatial-intelligence/Awesome-Visual-Spatial-Reasoning?style=social)
+
+- [awesome-spatial-reasoning](https://github.com/arijitray1993/awesome-spatial-reasoning)  ![GitHub stars](https://img.shields.io/github/stars/arijitray1993/awesome-spatial-reasoning?style=social)
+
+- [awesome-3d-spatial-reasoning](https://github.com/wufeim/awesome-3d-spatial-reasoning)  ![GitHub stars](https://img.shields.io/github/stars/wufeim/awesome-3d-spatial-reasoning?style=social)
+
+- [awesome-paper-VLM-spatial-reasoning](https://github.com/hosytuyen/awesome-paper-VLM-spatial-reasoning)  ![GitHub stars](https://img.shields.io/github/stars/hosytuyen/awesome-paper-VLM-spatial-reasoning?style=social)
+
+</details>
+
+
+
+
 ## 4.1 Representation
 
 ### 4.1.1 Language
